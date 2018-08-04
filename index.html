@@ -1,0 +1,25 @@
+---
+layout: default
+title: Tokiota
+---
+<div class="blurb">
+        <div id="archives">
+        <h3>Categories</h3>
+        {% for category in site.categories %}
+            <div class="archive-group">
+            {% capture category_name %}{{ category | first }}{% endcapture %}
+            <div id="#{{ category_name | slugize }}"></div>
+            <p></p>
+            
+            <h3 class="category-head">{{ category_name }}</h3>
+            <a name="{{ category_name | slugize }}"></a>
+            {% for post in site.categories[category_name] %}
+            <article class="archive-item">
+                <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+            </article>
+            {% endfor %}
+            </div>
+        {% endfor %}
+        </div>
+	<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
+</div><!-- /.blurb -->
