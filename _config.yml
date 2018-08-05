@@ -4,6 +4,7 @@ description:       Un blog de Tokiota
 author:            Tokiota
 baseurl:           ""
 url:               "http://tokiota.github.io"
+userdisqus:         tokiotatest
 
 # Social Profiles
 twitter_username:  Tokiota_IT

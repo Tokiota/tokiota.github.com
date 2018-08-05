@@ -8,6 +8,17 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
+        ·
+        {% for category in site.categories %}
+          {% capture category_name %}{{ category | first }}{% endcapture %}
+          <li class="nav-item">
+              <a class="nav-link" href="{{ "/categories/" | append: category_name | relative_url }}">{{ category_name }}</a>
+          </li>
+        {% endfor %}
+        ·
+        <li class="nav-item">
+          <a class="nav-link" href="{{"/categories" | relative_url }}">Categories</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="{{"/posts" | relative_url }}">Posts</a>
         </li>

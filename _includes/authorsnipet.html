@@ -1,0 +1,29 @@
+<div class="container">
+  <span class="">
+    Posted by 
+    <a href="#" class="text-info">{{ page.postAuthor }}</a> 
+    on 
+    {{ page.date | date: '%B %d, %Y' }}
+    
+    {% if site.twitter_username %}
+    <a href="https://www.twitter.com/{{ page.postTwitter }}">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+    {% endif %}
+    {% if site.github_username %}
+    <a href="https://github.com/{{ site.postGithub }}">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+    {% endif %}
+  </span>
+</div>
+
+  
+
+

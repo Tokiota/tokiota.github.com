@@ -17,9 +17,8 @@ layout: default
           {% if page.subtitle %}
           <h2 class="subheading">{{ page.subtitle }}</h2>
           {% endif %}
-          <span class="meta">Posted by
-            <a href="#">Tokiota</a>
-            on {{ page.date | date: '%B %d, %Y' }}</span>
+          
+          {% include authorsnipet.html %}
         </div>
       </div>
     </div>
@@ -31,6 +30,11 @@ layout: default
     <div class="col-lg-8 col-md-10 mx-auto">
 
       {{ content }}
+
+      <br>
+      
+          
+      {% include authorsnipet.html %}
 
       <hr>
 
@@ -47,4 +51,16 @@ layout: default
 
     </div>
   </div>
+  <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <hr>
+  
+        <div class="clearfix">
+          {% include disqus.html %}
+        </div>
+    </div>
+  </div>
 </div>
+
+
