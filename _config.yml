@@ -26,8 +26,8 @@ profile_linkedin: https://www.linkedin.com/company/tokiota/
 
 paginate:         10
 
-title:            "Blog Tokiotas"
-tagline:          "Diario de abordo en Tokiota"
+title:            "Blog de Tokiotas"
+tagline:          "pasión por la tecnología"
 description:      "El viaje más largo comienza con un primer paso."
 locale:           es_es
 encoding:         utf-8
