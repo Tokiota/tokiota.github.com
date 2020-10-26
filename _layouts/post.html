@@ -1,66 +1,52 @@
 ---
 layout: default
+
 ---
 
-<!-- Page Header -->
-{% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-{% else %}
-<header class="masthead">
-{% endif %}
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="post-heading">
-          <h1>{{ page.title }}</h1>
-          {% if page.subtitle %}
-          <h2 class="subheading">{{ page.subtitle }}</h2>
-          {% endif %}
-          
-          {% include authorsnipet.html %}
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
-
-      {{ content }}
-
-      <br>
-      
-          
-      {% include authorsnipet.html %}
-
-      <hr>
-
-      <div class="clearfix">
-
-        {% if page.previous.url %}
-        <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline"> Post</span></a>
-        {% endif %}
-        {% if page.next.url %}
-        <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline"> Post</span> &rarr;</a>
-        {% endif %}
-
-      </div>
-
-    </div>
-  </div>
-  <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-
-        <hr>
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-author">por <a href="#infoAuthor">{{ page.author.name }}</a></span>
+  <span class="post-date">{% include code_date.html date=page.date %} &#903; {% include read_time.html %}</span>
   
-        <div class="clearfix">
-          {% include disqus.html %}
-        </div>
-    </div>
-  </div>
+  <hr>
+  {{ content }}
 </div>
 
+<hr style="border-color: #eee;"/>
 
+<h4>Escrito por:</h4>
+{% include info_author.html %}
+
+
+<hr style="border-color: #eee;"/>
+<h4>Comparte esto:</h4>
+<ul class="share-buttons">
+  {% assign customTitle = page.title | append: ' by @' | append: site.twitter %}
+  {% assign fullUrl = site.url | append: page.url %}
+
+  <li><a href="https://facebook.com/sharer.php?u={{ fullUrl }}" rel="nofollow" title="Share on Facebook" target="_blank"><img alt="Compartir en Facebook" src="{{site.baseurl}}public/img/Facebook.svg" /></a></li>
+  <li><a href="https://twitter.com/intent/tweet?text={{ customTitle }}&url={{ fullUrl }}" rel="nofollow" target="_blank" title="Tweet"><img alt="Tweet" src="{{site.baseurl}}public/img/Twitter.svg" /></a></li>
+  <li><a href="https://api.whatsapp.com/send?text={{ customTitle }} {{ fullUrl }}" rel="nofollow noopener noreferrer" target="_blank" title="Compartir en WhatsApp"><img alt="WhatsApp" src="{{site.baseurl}}public/img/WhatsApp.svg" /></a></li>
+  <li><a href="https://getpocket.com/save?url={{ fullUrl }}&title={{ customTitle }}" rel="nofollow" target="_blank" title="Añadir a Pocket"><img alt="Añadir a Pocket" src="{{site.baseurl}}public/img/Pocket.svg" /></a></li>
+  <li><a href="http://www.reddit.com/submit?url={{ fullUrl }}&title={{ customTitle }}" rel="nofollow" target="_blank" title="Compartir en Reddit"><img alt="Compartir en Reddit" src="{{site.baseurl}}public/img/Reddit.svg" /></a></li>
+  <li><a href="http://www.linkedin.com/shareArticle?mini=true&url={{ fullUrl }}&title={{ customTitle }}" rel="nofollow" target="_blank" title="Compartir en LinkedIn"><img alt="Compartir en LinkedIn" src="{{site.baseurl}}public/img/LinkedIn.svg" /></a></li>
+  <li><a href="mailto:?subject={{ customTitle }}&body={{ fullUrl }}" rel="nofollow" target="_blank" title="Enviar email"><img alt="Enviar email" src="{{site.baseurl}}public/img/Email.svg" /></a></li>
+</ul>
+
+
+ 
+<!-- EnlighterJS -->
+<!-- Init Code -->
+<script type="text/javascript">
+  // - highlight all pre + code tags (CSS3 selectors)
+  // - use javascript as default language
+  // - use theme "enlighter" as default theme
+  // - replace tabs with 2 spaces
+  EnlighterJS.init('pre','code', {
+          language : 'csharp',
+          theme: 'godzilla',
+          indent : 2,
+          textOverflow: 'scroll'
+          
+  });
+</script>

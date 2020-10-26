@@ -1,0 +1,443 @@
+---
+---
+
+@charset "UTF-8";
+
+$white: #fff !default;
+$gray: #f9f9f9 !default;
+$accent-color: #a40a0a !default;
+$text-color: #515151 !default;;
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+body {
+  color: $text-color;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+
+// Grid structural styles (CSS Grid)
+.header         { grid-area: header; }
+.main           { grid-area: main; }
+//.sidebar-left   { grid-area: sidebar-left; }
+.sidebar-right  { grid-area: sidebar-right; }
+.footer         { grid-area: footer; }
+.containerMain  {  grid-area: containerMain; }
+
+.grid-container {
+  // max-width: 900px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 100%;
+  // grid-template-rows: auto auto 1fr auto auto;
+  // grid-template-areas: "header"
+  //                      "sidebar-left"
+  //                      "main"
+  //                      "sidebar-right"
+  //                      "footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header"
+                       "containerMain"
+                       //"sidebar-right"
+                       "footer";
+}
+
+@media (min-width: 540px) {
+  .grid-container {
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header header header"
+                         "containerMain containerMain containerMain"  
+                        //"main main sidebar-right sidebar-right"
+                         "footer footer footer";
+  }
+}
+.containerMain {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.sidebar-right{
+  width: 100%;
+}
+// Post entry styles (flexbox)
+.main {
+  margin: 0 auto;
+  max-width: 900px;
+}
+.entry {
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05); 
+  -moz-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+  padding: 20px;
+  
+}
+article.entry:hover{
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15); 
+  -moz-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.entry-header {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.entry-content {
+  display: flex;
+  flex-direction: column;
+  // align-items: start;
+}
+.entry-content-titlle {
+  padding-left: 0px;
+}
+@media (min-width: 600px) {
+  .sidebar-right{
+    width: 300px;
+  }
+  .entry {
+    display: flex;
+    flex-direction: column;
+  }
+  .entry-header{
+    flex-direction: row;
+  }
+  .entry-content-titlle {
+    padding-left: 10px;
+  }
+
+  .entry-thumb {
+    width: 200px;
+    //flex: none;
+    margin: 0px;    
+  }
+  
+  .entry-title {
+    font-size: 18px;
+    padding-right: 15px;
+    margin-bottom: 0;
+    margin-top:0px;
+  }
+
+  .entry-meta {
+    flex: none;
+    font-size: 16px;
+    margin-left: auto;
+    margin-top: 5px;
+  }
+}
+
+.page {
+  background-color: $gray;
+}
+
+.header,
+.footer {
+  padding: 20px;
+  background-color: $accent-color;
+  color: $white !important;
+  text-align: center;
+}
+
+.header > h1,
+.header > h2,
+.header > h3,
+.header > h4,
+.header > h5,
+.header > h6,
+.header > p {
+  color: $white !important;
+}
+
+.footer-container{
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  padding: 25px;
+}
+
+.sidebar {
+  //padding: 25px;
+  //background-color: darken($gray, 1%);  
+  background-color: #ffffff;
+}
+.sidebar-section{
+  background-color: #f5f5f5;
+  padding: 1px 15px 15px 15px;
+  margin-top: 20px;
+  min-height: 100px;
+}
+
+// Other Appearance styles
+img {
+  max-width: 100%;
+}
+
+/* No `:visited` state is required by default (browsers will use `a`) */
+a {
+  color: $accent-color;
+  text-decoration: none;
+}
+a strong {
+  color: inherit;
+}
+/* `:focus` is linked to `:hover` for basic accessibility */
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {  
+  margin-bottom: .5rem;
+  font-weight: bold;
+  line-height: 1.25;
+  //color: #313131;
+  color: $text-color;
+  text-rendering: optimizeLegibility;
+}
+h1 {
+  margin-top: 3.2rem;
+  font-size: 2rem;
+}
+h2 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+h3 {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+h4, h5, h6 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* Body text */
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+strong {
+  color: #303030;
+}
+
+
+/* Lists */
+ul, ol, dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-bottom: .5rem;
+}
+
+/* Misc */
+hr {
+  position: relative;
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #fff;
+}
+
+abbr {
+  font-size: 85%;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
+}
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted #e5e5e5;
+}
+
+/* reading-time */
+.post-author {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 5px;
+  color: #9a9a9a;
+  font-size: 16px
+}
+.post-author a {
+  color:#9a9a9a !important;
+}
+.post-date {
+  font-size: 16px;
+}
+/* Notes: */
+div.note {
+  background-color: #fbf2d0;
+  padding: 10px;
+  margin-left: 0px;
+  margin-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-color: #D1CAAD;
+  border-left-width: 5px;
+  border-left-style: solid;
+  color: #06363C;
+}
+span.notetitle {
+  font-weight: bold;
+}
+
+img.emoji {
+  border-width: 0px;
+  display: inline;
+}
+
+a.myButton {
+background-color: #a40a0a;
+  border: 1px solid #640606;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff !important;
+  margin: 20px 0px;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+  text-decoration: none;
+  /* width: 100%; */
+  text-align: center;
+}
+a.myButton:hover {
+  background-color:#ec1010;
+  text-decoration:none;
+}
+/* Share Buttons */
+ul.share-buttons{
+  list-style: none;
+  padding: 0;
+}
+
+ul.share-buttons li{
+  display: inline-block;
+}
+
+ul.share-buttons .sr-only{
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+ul.share-buttons img{
+  width: 48px;
+  border-width: 0px;
+}
+/* Info author post */
+.container-info-author{
+  margin-top: 1.5em;
+  background-color: #fafafa;
+  border-radius: 5px;
+  padding: 2rem;
+  overflow: hidden;
+  clear: both;
+  border: 0;
+  margin-bottom: 3rem;
+}
+.info-author .photo {
+  border-radius: 50%;
+  float: left;
+  margin-right: 2rem;
+  border: 4px solid #dedede;
+}
+.info-author a {
+  text-decoration: none;
+}
+
+
+/* Reults Search */
+.search-input {
+  font-size: 18px;
+  padding: 5px;
+  margin: 20px 0px 20px 0px;
+  width: 100%;
+}
+#search-container ul {
+  padding-left: 16px;  
+}
+#search-container ul li {
+  padding: 2px 0px 2px 0px;
+}
+
+// highLihgts por Markdown con el uso de: ```
+.highlight {
+  background-color: #e5e5e5;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Table Styles */
+table.simpleTable {
+  border: 1px solid #333333;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.simpleTable td, table.simpleTable th {
+  border: 1px solid #AAAAAA;
+  padding: 4px 4px;
+}
+table.simpleTable tbody td {
+  font-size: 13px;
+}
+table.simpleTable tr:nth-child(even) {
+  background: #EEEEEE;
+}
+table.simpleTable thead {
+  background: #FFFFFF;
+  border-bottom: 2px solid #444444;
+}
+table.simpleTable thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #000000;
+}
+table.simpleTable tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-top: 2px solid #444444;
+}
+table.simpleTable tfoot td {
+  font-size: 14px;
+}

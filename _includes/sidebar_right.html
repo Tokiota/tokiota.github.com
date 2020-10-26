@@ -1,0 +1,68 @@
+<div class="sidebar-section">
+  <h3>Tokiota Team</h3>
+  Con este blog queremos transmitir la pasión que todo Tokiota tiene por la tecnología. 
+  Si crees que puedes formar parte de nuestro equipo <a href="https://tokiota.com/contacto.html">envíanos tu currículum</a>.
+</div>
+
+<div class="sidebar-section">
+  <h3>Próximos eventos</h3>
+  <div><i>sin agenda</i></div>
+</div>
+
+<div class="sidebar-section">
+  <input type="text" id="search-input" class="search-input" placeholder="Buscar...">
+  <div id="search-container">
+    <ul id="results-container"></ul>
+  </div>
+  <!-- Script pointing to jekyll-search.js -->
+  <script type="text/javascript">
+    SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '/search.json',
+      noResultsText: 'No hay resultados',
+      limit: 5,
+    })
+  </script>
+</div>
+
+<div class="sidebar-section">
+  
+  <div id="tagscloud">
+    {% assign sortedCategories = site.categories | sort %}
+    {% assign index = 1 %}
+    
+    {% for category in sortedCategories %}
+      <div class="archive-group">
+        {% capture category_name %}{{ category | first }}{% endcapture %}
+        <p></p>
+        <a class="tagc{{index}}" href="/categories/#{{ category_name }}">{{ category_name }} ({{ site.categories[category_name].size }})</a>      
+      </div>
+      {% assign index = index | plus:1 %}
+      {% if index > 3' %}
+        {% assign index = 1 %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<div class="sidebar-section">
+  <h3>Categorías</h3>
+  <div id="archives">
+    {% assign sortedCategories = site.categories | sort %}
+    {% for category in sortedCategories %}
+      <div class="archive-group">
+        {% capture category_name %}{{ category | first }}{% endcapture %}
+        <p></p>
+        <a href="/categories/#{{ category_name }}">{{ category_name }} ({{ site.categories[category_name].size }})</a>      
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+{% if page.layout == 'post' %}
+<div class="sidebar-section">
+  {% include last_posts.html %}
+</div>
+{% endif %}

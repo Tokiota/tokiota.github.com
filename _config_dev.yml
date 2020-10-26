@@ -1,0 +1,4 @@
+# _config.yml - Base config used in production
+baseurl:          /
+google_analytics: UA-XXXXXXX-X
+destination: ../tempsite

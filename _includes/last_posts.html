@@ -1,0 +1,14 @@
+<div class="related">
+  <h3>Artículos recientes</h3>
+  <ul class="related-posts">
+    {% for p in site.related_posts limit:3 %}
+      <li>
+        <h4>
+          <a href="{{ post.url }}">
+            {{ p.title }}
+          </a>
+        </h4>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

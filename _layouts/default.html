@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en-us">
 
   {% include head.html %}
 
   <body>
+    
+    <div class="grid-container">
 
-    {% include navbar.html %}
+      <header class="header">
+        {% include header.html %}
+      </header>
 
-    {{ content }}
+      <div class="containerMain">
+        <main class="main">
+          {{ content }}
+        </main>
+      
+        <div class="sidebar sidebar-right">
+          {% include sidebar_right.html %}
+        </div>
+      </div>
+      
+      <footer class="footer">
+        {% include footer.html %}
+      </footer>
 
-    {% include footer.html %}
+    </div>
 
-    {% include scripts.html %}
-
-  </body>
-
+  </body>  
+  
 </html>

@@ -1,0 +1,30 @@
+<div id="infoAuthor" class="container-info-author">
+  <span class="info-author">
+    <img class="photo" width="100" height="100" alt="{{page.author.name}}" src="/public/img/authors/{{page.author.image}}">
+    <b>{{page.author.name}}</b>
+    <br/>
+    {{page.author.signText}}
+    <br/>
+    {% if page.author.twitter %}
+    <a href="{{ page.author.twitter }}">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-twitter fa-stack-1x"></i>
+      </span>
+    </a>
+    {% endif %}
+    {% if page.author.linkedin %}
+    <a href="{{ page.author.linkedin }}">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-linkedin fa-stack-1x"></i>
+      </span>
+    </a>
+    {% endif %}
+    {% if page.author.github %}
+    <a href="{{ page.author.github }}">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-github fa-stack-1x"></i>
+      </span>
+    </a>
+    {% endif %}
+  </span>
+</div>

@@ -1,0 +1,10 @@
+{% comment %} 
+# Parameter input:
+- date
+{% endcomment %}
+{% assign months = "Enero|Febrero|Marzo|Abril|Mayo|Junio|Julio|Agosto|Septiembre|Octubre|Noviembre|Diciembre" | split: "|" %}
+{% assign m = include.date | date: "%-m" | minus: 1 %}
+{% assign day = include.date | date: "%d" %}
+{% assign month = months[m] %}
+{% assign year = include.date | date: "%Y" %}
+{{ day }} de {{ month }} del {{ year }}

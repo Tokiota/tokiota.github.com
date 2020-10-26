@@ -1,20 +1,41 @@
-title:             Tokiota Blog
-email:             tokiota@tokiota.com
-description:       Un blog de Tokiota
-author:            Tokiota
-baseurl:           ""
-url:               "http://tokiota.github.io"
-userdisqus:         tokiotatest
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge
 
-# Social Profiles
-twitter_username:  Tokiota_IT
-github_username:   Tokiota
-# facebook_username: StartBootstrap
+# Permalinks
+permalink:        /:year/:month/:day/:title/
 
-# Build settings
-markdown:          kramdown
-paginate:          5
-paginate_path:     "/posts/page:num/"
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
+# Custom vars
+version:          2.1.0
+
+github:           metadata
+
+repository:       tokiota/tokiota.github.io
+
+exclude: [vendor]
+
+# Setup
+name:             "Tokiota"
+url:              https://tokiota.com
+twitter:          Tokiota_IT
+facebook:         https://es-es.facebook.com/tokiota.es
+youtube:          https://www.youtube.com/channel/UCfiDuxp9zGMJ7NIFyjRuHWQ
+instagram:        https://www.instagram.com/tokiota_it
+profile_github:   https://github.com/tokiota
+profile_linkedin: https://www.linkedin.com/company/tokiota/
+
+paginate:         2
+
+title:            "Blog Tokiotas"
+tagline:          "Diario de abordo en Tokiota"
+description:      "El viaje más largo comienza con un primer paso."
+locale:           es_es
+encoding:         utf-8
+url:              https://blog.tokiota.com
+baseurl:          https://blog.tokiota.com/  
+google_analytics: UA-XXXXXXXXX-X
+icon:             /public/img/defaulticon.jpg
+
+plugins: 
+  - jekyll-sitemap
+  - jemoji

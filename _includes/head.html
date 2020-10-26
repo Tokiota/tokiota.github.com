@@ -1,24 +1,108 @@
 <head>
+   <!-- Analitycs -->
+   {% if site.google_analytics and jekyll.environment == 'production' %}
+   {% include analytics.html %}
+   {% endif %}
+   
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <title>
-    {% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}
-    {% else %}{{ site.title | escape }}{% endif %}
+    {% if page.title == "Home" %}
+      {{ site.title }} &middot; {{ site.tagline }}
+    {% else %}
+      {{ page.title }} &middot; {{ site.title }}
+    {% endif %}
   </title>
 
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
-  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <!-- Social Metas -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">
+  <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url}}">
+  <meta property="og:image" content="{% if page.featured_image %}{{ page.featured_image | prepend: site.url }}{% else %}{{ site.icon | prepend: site.url  }}{% endif %}">
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:locale" content="{{ site.locale }}">
+  {% if page.date %}
+    <meta property="article:modified_time" content="{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}">
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+    <meta property="article:author" content="{{ site.author.name }}">
+    {% for post in site.related_posts limit:3 %}
+      <meta property="og:see_also" content="{{ post.url | replace:'index.html','' | prepend: site.url }}">
+    {% endfor %}
+  {% endif %}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@{{ site.author.twitter }}">
+  <meta name="twitter:creator" content="@{{ site.author.twitter }}">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:image" content="{% if page.featured_image %}{{ page.featured_image | prepend: site.url }}{% else %}{{ site.icon | prepend: site.url }}{% endif %}">
+  <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.url  }}">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  
 
-  <link rel="stylesheet" href="{{"/assets/vendor/bootstrap/css/bootstrap.min.css" | relative_url }}">
+  {% if page.robots %}
+    <meta name="robots" content="{{ page.robots }}">
+  {% endif %}
 
-  <link rel="stylesheet" href="{{"/assets/vendor/font-awesome/css/font-awesome.min.css" | relative_url }}">
+  <meta rel="author" content="{{ site.author.name }}">
+  {% if site.author.url %}
+  <link rel="author" href="{{ site.author.url }}" />
+  {% endif %}
 
-  <link rel="stylesheet" href="{{"/assets/main.css" | relative_url }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+  <link rel="alternate" type="application/atom+xml" title="{{site.title}}" href="/atom.xml" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+  
+  
+  {% if page.next.url %}
+    <link rel="next" href="{{ page.next.url | replace:'index.html','' | prepend: site.url }}" title="{{ page.next.title }}">
+  {% endif %}
+  {% if page.previous.url %}
+    <link rel="prev" href="{{ page.previous.url | replace:'index.html','' | prepend: site.url }}" title="{{ page.previous.title }}">
+  {% endif %}
+  
+  <!-- CSS -->  
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/style.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/pagination.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/tags-cloud.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/gistgithub.css">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie"> 
+    
+  <!-- Icons -->
+  <link rel="shortcut icon"                                href="{{ site.baseurl }}public/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon-precomposed"                 href="{{ site.baseurl }}public/img/apple-touch-icon.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57"   href="{{ site.baseurl }}public/img/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72"   href="{{ site.baseurl }}public/img/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76"   href="{{ site.baseurl }}public/img/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.baseurl }}public/img/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ site.baseurl }}public/img/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}public/img/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ site.baseurl }}public/img/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="{{ site.baseurl }}public/img/apple-touch-icon-180x180.png" />
+  
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css">
+
+  {% if page.layout == "post" %}
+   <!-- Include dependeces EnlighterJS  -->
+   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/scripts/enlighterjs/enlighterjs.godzilla.min.css" />       
+   <script type="text/javascript" src="{{ site.baseurl }}assets/scripts/enlighterjs/enlighterjs.min.js"></script>
+  {% endif %}
+
+  {% seo %} 
+
+      <script type="text/javascript" src="{{ site.baseurl }}assets/scripts/jekyll-search.min.js" ></script>
+      <script type="text/javascript" src="{{ site.baseurl }}assets/scripts/tags-cloud.js" ></script>
+      
+  
+    </head>
 </head>
