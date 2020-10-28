@@ -31,8 +31,8 @@ tagline:          "pasión por la tecnología"
 description:      "El viaje más largo comienza con un primer paso."
 locale:           es_es
 encoding:         utf-8
-url:              https://tokiota.github.io
-baseurl:          https://tokiota.github.io/
+url:              https://blog.tokiota.com
+baseurl:          https://blog.tokiota.com/
 google_analytics: UA-XXXXXXXXX-X
 icon:             /public/img/defaulticon.jpg
 
