@@ -3,7 +3,7 @@ published: true
 date: 2020-10-25 05:00:00 +0100
 layout: post
 title: Hello world!
-summary: "Un rincón creado con la pasión de todos nuestros Tokiotas por compartir el conocimiento." 
+summary: "Arrancamos nuevo blog. Un rincón creado con la pasión de todos nuestros Tokiotas por compartir conocimiento e inquietudes tecnológicas, englobado al mundo del desarrollo de software, infraestructura, cloud, web, móvil, innovación... "
 comments: true
 categories: [Tokiota]
 tags: [azure, microsoft]
