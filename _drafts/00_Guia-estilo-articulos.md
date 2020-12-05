@@ -3,11 +3,12 @@ published: true
 date: 2020-10-20 00:00:00 +0100
 layout: post
 title: "Guía de estilos para los artículos"
+summary: "Este es un resumen largo del artículo que se usará de entradilla en la pantalla Home. aquí tambien se admiten tags html para palabras en <b>negrita</b>, en <i>cursiva</i>, enlaces a alguna <a href='https://tokiota.com'>página web</a> y mismo emojis ⛩😃⛩.<p> Si no sabes como ponerlos es tan fácil como pulsar dos teclas [WIN]+[.] y de saldrá un menú donde elegir (al menos en Windows10)."
 excerpt: "Una guía para hacer que nuestros artículos del blog brillen como es debido."
 categories: [Tokiota] # Desarrollo, Infraestructura, Bizpro, Management, Tokiotas, Eventos
 tags: [blog] # siempre en minisculas
 featured_image: /public/uploads/2020/10/20-guia-de-estilos-para-articulos/blog.jpg
-summary: "Este es un resumen largo del artículo que se usará de entradilla en la pantalla Home. aquí tambien se admiten tags html para palabras en <b>negrita</b>, en <i>cursiva</i>, enlaces a alguna <a href='https://tokiota.com'>página web</a> y mismo emojis ⛩😃⛩.<p> Si no sabes como ponerlos es tan fácil como pulsar dos teclas [WIN]+[.] y de saldrá un menú donde elegir (al menos en Windows10)."
+pathToPublicFolder: "public/uploads/2020/10/20-guia-de-estilos-para-articulos"
 author:
   name: "Tokiota"
   image: tokiota.jpg
@@ -15,13 +16,8 @@ author:
   linkedin: https://www.linkedin.com/in/tokiota/
   twitter: https://twitter.com/Tokiota_IT
   github: https://github.com/Tokiota
-codeStyle: enlighterjs
 ---
-
-{% include code_image.html 
-image='2020/10/20-guia-de-estilos-para-articulos/blog.jpg'
-title='Como descargar la imagen desde outlook web'
-%}
+{% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
 Esta entrada de blog sirve a modo de guía de estilos y recursos a usar para hacer que los artículos brillen correctamente.
 Para ver como se escribe cada sección, accede al código de este fichero <b>00_Guía-estilo.artículos.md</b>. 
@@ -38,6 +34,7 @@ Aquí tienes un índice de la guía:
 - [Cómo se ponen los títulos](#cómo-se-ponen-los-títulos)
 - [Cómo añadir un enlace](#cómo-añadir-un-enlace)
 - [Cómo añadir una imágen](#cómo-añadir-una-imágen)
+  - [Donde subir las imágenes](#donde-subir-las-imágenes)
 - [Cómo añadir notas](#cómo-añadir-notas)
 - [Cómo añadir fragmentos de código](#cómo-añadir-fragmentos-de-código)
 - [Cómo escribir una tabla de datos](#cómo-escribir-una-tabla-de-datos)
@@ -62,11 +59,12 @@ published: false
 date: 2100-12-12 00:00:00 +0100
 layout: post
 title: "Guía de estilos para los artículos"
+summary: "Este es un resumen largo del artículo que se usará de entradilla en la pantalla Home. aquí tambien se admiten tags html para palabras en <b>negrita</b>, en <i>cursiva</i>, enlaces a alguna <a href='https://tokiota.com'>página web</a> y mismo emojis ⛩😃⛩.<p> Si no sabes como ponerlos es tan fácil como pulsar dos teclas [WIN]+[.] y de saldrá un menú donde elegir (al menos en Windows10).</p>"
 excerpt: "Una guía para hacer que nuestros artículos del blog brillen como es debido."
 categories: [Tokiota] # Desarrollo, Infraestructura, Bizpro, Management, Tokiotas, Eventos
 tags: [blog] # siempre en minúsculas
 featured_image: /public/uploads/2020/10/20-guia-de-estilos-para-articulos/blog.jpg
-summary: "Este es un resumen largo del artículo que se usará de entradilla en la pantalla Home. aquí tambien se admiten tags html para palabras en <b>negrita</b>, en <i>cursiva</i>, enlaces a alguna <a href='https://tokiota.com'>página web</a> y mismo emojis ⛩😃⛩.<p> Si no sabes como ponerlos es tan fácil como pulsar dos teclas [WIN]+[.] y de saldrá un menú donde elegir (al menos en Windows10).</p>"
+pathToPublicFolder: "public/uploads/2020/10/20-guia-de-estilos-para-articulos"
 author:
   name: "Tokiota"
   image: tokiota.jpg
@@ -75,6 +73,7 @@ author:
   twitter: https://twitter.com/Tokiota_IT
   github: https://github.com/Tokiota
 ---
+{{ "{% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder " }}%}
 </pre>
 
 A continuación explico cada uno:
@@ -92,12 +91,17 @@ A continuación explico cada uno:
   - Tokiota
   - Eventos
 - <b>tags</b>: array de las tecnologías que quieran detallarse. <b>Se escriben en minúsculas</b>.
-- <b>featured_image</b>: es la ruta a la imágen que se visualizará en la entradilla de inicio y en las tarjetas de visualización al compartir en redes sociales.
+- <b>featured_image</b>: es la ruta a la imágen que se visualizará en la entradilla de inicio y en las tarjetas de visualización al compartir en redes sociales. Crea la carpeta siguiendo la misma regla y nomenclatura. Más detalle en la sección [Donde subir las imágenes](#donde-subir-las-imágenes)].
+- <b>pathToImages</b>: "es la ruta a la carpeta donde se alojarán las imágenes de este blog."
+
 - <b>summary</b>: Este es un resumen largo del artículo que se usará de entradilla en la pantalla Home. aquí tambien se admiten tags html para palabras en <b>negrita</b>, en <i>cursiva</i>, enlaces a alguna <a href='https://tokiota.com'>página web</a> y mismo emojis ⛩😃⛩. Si no sabes como ponerlos es tan fácil como pulsar dos teclas [WIN]+[.] y de saldrá un menú donde elegir (al menos en Windows10).
 - <b>author name</b>: Nombre de la persona autora del artículo.
 - <b>author image</b>: Foto del autor/a. Debe alojarse en la carpeta <b>public/img/authors</b>. [Ver aquí más detalle.](#¿qué-foto-pongo-para-el-autor?)
 - <b>author signText</b>: texto que
 
+## Variables de página 
+Tras los `---` tenemos definido una variable de página:
+- <b>pathPublicFolder</b>: será usada para incluir una imágen o cualquier enlace a fichero ya que es una url a la carpeta donde se alojar imágenes o ficheros adjuntos usados en artículo.
 
 # Qué foto pongo para el autor
 Primero busca la imagen en <b>public/img/authors</b>, puede que ya exista.
@@ -109,9 +113,11 @@ Si hay que añadir una nueva, mi consejo es descargar la imagen que sale con tu 
 - Botón derecho en la imagen
 - Guardar como, a la carpeta <b>public/img/authors</b>. Nombramos al fichero con **nombre_apellido1_apellido2.jpg**.
 
-{% include code_image.html 
-image='2020/10/20-guia-de-estilos-para-articulos/obtener_imagen_autor.png'
+
+{% include code_image.html path=pathPublicFolder 
+image='obtener_imagen_autor.png'
 title='Como descargar la imagen desde outlook web'
+style=''
 %}
 
 # Cómo se ponen los títulos
@@ -155,19 +161,32 @@ Pero intentaremos seguir lo siguiente:
 
 
 # Cómo añadir una imágen
-Insertamos el siguiente fragmento de código indicando la ruta de la imagen y el texto alternativo.:
+La forma más facil de insertar una imágen es haciendo uso del siguietne fragmento de código indicando el fichero de la imagen y el texto alternativo:
 <pre data-enlighter-language="markdown">
 {{ "
-{% include code_image.html 
-image='2020/10/20/20-guia-de-estilos-para-articulos/tokiota_foto.jpg'
+{% include code_image.html path=pathPublicFolder
+image='tokiota_foto.jpg'
 title='Texto alternativo a la imagen'
+style=''
 " }}%}
 </pre>
 Y se verá esto:
 
-{% include code_image.html 
-image='2020/10/20-guia-de-estilos-para-articulos/tokiota_foto.jpg'
+{% include code_image.html path=pathPublicFolder
+image='tokiota_foto.jpg'
 title='Texto alternativo a la imagen'
+style=''
+%}
+
+## Donde subir las imágenes
+Las imágenes deberán ser alojadas en la carpeta indicada en la sección de configuración <b>pathToPublicFolder</b>. 
+Tendremos que crear la carpeta siguiendo la regla y la nomenclatura:
+<br/><b>public/uploads/yyyy/MM/dd-mi-titulo-del-articulo</b>.
+
+Es importante que el nombre de la carpeta sea en <b>minúsculas</b> y <b>sin espacios en en blanco</b>, usando guiones.
+
+{% include code_note.html 
+content='Siempre puedes hacer uso de código html para incluir imágenes de urls externas pero evitaremos esta práctica en la medida de lo posible porque si la url externa cambia o desaparece el artículo pierde valor. Sería mejor hacer una copia a nuestra carpeta y citar fuente/autor.'
 %}
 
 # Cómo añadir notas
