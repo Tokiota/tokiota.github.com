@@ -9,6 +9,7 @@ categories: [Tokiota]
 tags: [azure, microsoft]
 excerpt: Arrancamos nuevo blog. Un rincón creado con la pasión de todos nuestros Tokiotas por compartir el conocimiento.
 featured_image: /public/uploads/2020/10/25-Hello-World/hello-toris.jpg
+pathToPublicFolder: "public/uploads/2020/10/25-Hello-World"
 author:
   name: "Tokiota"
   image: tokiota.jpg
@@ -17,8 +18,13 @@ author:
   twitter: https://twitter.com/Tokiota_IT
   github: https://github.com/Tokiota
 ---
+{% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
-![Mirando al 2019]({{site.baseurl}}public/uploads/2020/10/25-Hello-World/hello-toris.jpg)
+{% include code_image.html path=pathPublicFolder
+image='hello-toris.jpg'
+title='Hello World!'
+style=''
+%}
 
 Hello World! 
 
