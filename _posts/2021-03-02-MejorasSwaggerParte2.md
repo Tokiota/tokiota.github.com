@@ -11,7 +11,7 @@ featured_image: /public/uploads/2021/03/02-Mejoras-Swagger-Parte2/swagger-banner
 pathToPublicFolder: "public/uploads/2021/03/02-Mejoras-Swagger-Parte2"
 author:
   name: "Antonio Cárdenas García"
-  image: antonio_cardenas-garcia.jpg
+  image: antonio_cardenas_garcia.jpg
   signText: "Consultant"
   linkedin: https://www.linkedin.com/in/
   twitter: https://twitter.com/

@@ -11,7 +11,7 @@ featured_image: /public/uploads/2021/03/16-Mejoras-Swagger-Parte3/swagger-banner
 pathToPublicFolder: "public/uploads/2021/03/16-Mejoras-Swagger-Parte3"
 author:
   name: "Antonio Cárdenas García"
-  image: antonio_cardenas-garcia.jpg
+  image: antonio_cardenas_garcia.jpg
   signText: "Consultant"
   linkedin: https://www.linkedin.com/in/
   twitter: https://twitter.com/
@@ -32,20 +32,20 @@ Recordamos que tenemos una API en asp.net core 3.1 y con la versión de Swashbuc
 
 ### **Fijar content type application/json**
 
-Si nuestra API solo va a aceptar y devolver contenido de tipo json, es recomendar fijar estos parámetros. Para ello utilizamos los atributos ‘Consumes’ y ‘Produces’ de Microsoft.AspNetCore.Mvc.
+Si nuestra API solo va a aceptar y devolver contenido de tipo json, es recomendar fijar estos parámetros. Para ello utilizamos los atributos 'Consumes' y 'Produces' de Microsoft.AspNetCore.Mvc.
 
 <pre data-enlighter-language="csharp">  
-/// <summary>
-/// Get example info.
-/// </summary>
-/// <param name="id">Example id.</param>
-/// <param name="request">Request example</param>
-/// <returns></returns>
-[HttpPatch("/example/{id}")]
-[Consumes("application/json")]
-[Produces("application/json")]
-public ActionResult<ExampleResponse> GetExample(int id, [FromBody] ExampleRequest request) 
-    => Ok(new ExampleResponse());
+        /// <summary>
+        /// Get example info.
+        /// </summary>
+        /// <param name="id">Example id.</param>
+        /// <param name="request">Request example</param>
+        /// <returns></returns>
+        [HttpPatch("/example/{id}")]
+        [Consumes("application/json")]
+        [Produces("application/json")]
+        public ActionResult<ExampleResponse> GetExample(int id, [FromBody] ExampleRequest request) 
+            => Ok(new ExampleResponse());
 </pre>
 
 En este caso se han aplicado a nivel de método como caso de prueba, sería más habitual aplicarlos a toda la API.
