@@ -103,7 +103,7 @@ services.AddSwaggerGen(c =>
 {
     //[...] 
 
-    c.SchemaFilter<ExamplesSchemaFilter>();
+    c.SchemaFilter < ExamplesSchemaFilter >();
 
     //[...]
 });
@@ -126,7 +126,7 @@ Creamos el siguiente endpoint de ejemplo:
 [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.Unauthorized)]
 [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.Forbidden)]
 [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.NotFound)]
-public ActionResult<ExampleResponse> GetExample(int id, [FromBody] ExampleRequest request) => Ok(new ExampleResponse());
+public ActionResult< ExampleResponse > GetExample(int id, [FromBody] ExampleRequest request) => Ok(new ExampleResponse());
 </pre>
 
 Y desde swagger veremos los esquemas asociados a Example Request y Response

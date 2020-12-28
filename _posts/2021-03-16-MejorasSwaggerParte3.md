@@ -35,17 +35,17 @@ Recordamos que tenemos una API en asp.net core 3.1 y con la versión de Swashbuc
 Si nuestra API solo va a aceptar y devolver contenido de tipo json, es recomendar fijar estos parámetros. Para ello utilizamos los atributos 'Consumes' y 'Produces' de Microsoft.AspNetCore.Mvc.
 
 <pre data-enlighter-language="csharp">  
-        /// <summary>
-        /// Get example info.
-        /// </summary>
-        /// <param name="id">Example id.</param>
-        /// <param name="request">Request example</param>
-        /// <returns></returns>
-        [HttpPatch("/example/{id}")]
-        [Consumes("application/json")]
-        [Produces("application/json")]
-        public ActionResult<ExampleResponse> GetExample(int id, [FromBody] ExampleRequest request) 
-            => Ok(new ExampleResponse());
+    /// <summary>
+    /// Get example info.
+    /// </summary>
+    /// <param name="id">Example id.</param>
+    /// <param name="request">Request example</param>
+    /// <returns></returns>
+    [HttpPatch("/example/{id}")]
+    [Consumes("application/json")]
+    [Produces("application/json")]
+    public ActionResult< ExampleResponse > GetExample(int id, [FromBody] ExampleRequest request) 
+    => Ok(new ExampleResponse());
 </pre>
 
 En este caso se han aplicado a nivel de método como caso de prueba, sería más habitual aplicarlos a toda la API.
@@ -60,7 +60,7 @@ public class CustomHeaderFilter : IOperationFilter
     public void Apply(OpenApiOperation operation, OperationFilterContext context)
     {
         if (operation.Parameters == null)
-            operation.Parameters = new List<OpenApiParameter>();
+            operation.Parameters = new List< OpenApiParameter >();
 
         operation.Parameters.Add(new OpenApiParameter
         {
@@ -74,7 +74,7 @@ public class CustomHeaderFilter : IOperationFilter
                 Example = new OpenApiString(CustomHeader.Xyz.ToString()),
                 Enum = Enum
                     .GetValues(typeof(CustomHeader))
-                    .Cast<CustomHeader>()
+                    .Cast< CustomHeader >()
                         .Select(x => OpenApiAnyFactory.CreateFor(new OpenApiSchema() { Type = "string" }, x.ToString()))
                         .ToList()
             }
@@ -111,7 +111,7 @@ services.AddSwaggerGen(c =>
 {
     //[...]
 
-    c.OperationFilter<CustomHeaderFilter>();
+    c.OperationFilter< CustomHeaderFilter >();
 
     //[...]
 });
