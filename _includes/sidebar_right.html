@@ -29,14 +29,14 @@
 <div class="sidebar-section">
   
   <div id="tagscloud">
-    {% assign sortedCategories = site.categories | sort %}
+    {% assign sortedTags = site.tags | sort %}
     {% assign index = 1 %}
     
-    {% for category in sortedCategories %}
+    {% for tag in sortedTags %}
       <div class="archive-group">
-        {% capture category_name %}{{ category | first }}{% endcapture %}
+        {% capture tag_name %}{{ tag | first }}{% endcapture %}
         <p></p>
-        <a class="tagc{{index}}" href="/categories/#{{ category_name }}">{{ category_name }} ({{ site.categories[category_name].size }})</a>      
+        <a class="tagc{{index}}" href="/tags/#{{ tag_name }}">{{ tag_name }} ({{ site.tags[tag_name].size }})</a>      
       </div>
       {% assign index = index | plus:1 %}
       {% if index > 3' %}
