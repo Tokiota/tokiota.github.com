@@ -25,7 +25,7 @@ profile_github:   https://github.com/tokiota
 profile_linkedin: https://www.linkedin.com/company/tokiota/
 
 paginate:         10
-
+future:           false
 title:            "Blog de Tokiotas"
 tagline:          "pasión por la tecnología"
 description:      "El viaje más largo comienza con un primer paso."
