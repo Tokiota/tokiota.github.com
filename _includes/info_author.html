@@ -5,7 +5,7 @@
     <br/>
     {{page.author.signText}}
     <br/>
-    {% if page.author.twitter %}
+    {% if page.author.twitter != blank %}
     <a href="{{ page.author.twitter }}">
       <span class="fa-stack fa-lg">
         <i class="fa fa-twitter fa-stack-1x"></i>

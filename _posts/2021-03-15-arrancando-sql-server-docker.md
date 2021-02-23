@@ -1,14 +1,14 @@
 ---
-published: false
-date: 2021-01-18 01:00:00 +0100
+published: true
+date: 2021-03-15 04:00:00 +0100
 layout: post
 title: "Arrancando SQL Server en docker linux"
 summary: "Te contamos lo fácil que resulta arrancar un contenedor de SQLServer y tener nuestro propio servidor de base de datos en cuestión de segundos. Se acabaron las esperas de instalaciones en tu equipo de desarrollo. "
 excerpt: "Arrancando SQLServer en docker linux para nuestro entorno desarrollo."
 categories: [Desarrollo]
 tags: [docker, sqlserver, linux]
-featured_image: /public/uploads/2021/01/18-arrancando-sql-server-docker/sqlserver_docker_min.png
-pathToPublicFolder: "public/uploads/2021/01/18-arrancando-sql-server-docker"
+featured_image: /public/uploads/2021/03/15-arrancando-sql-server-docker/sqlserver_docker_min.png
+pathToPublicFolder: "public/uploads/2021/03/15-arrancando-sql-server-docker"
 author:
   name: "David Gonzalo"
   image: david_gonzalo_pena.jpg

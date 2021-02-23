@@ -2,3 +2,4 @@
 baseurl:          /
 google_analytics: UA-XXXXXXX-X
 destination: ../tempsite
+future: true

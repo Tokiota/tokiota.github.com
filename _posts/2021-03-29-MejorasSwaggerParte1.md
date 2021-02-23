@@ -1,23 +1,22 @@
 ---
-published: false
-date: 2021-02-15 01:00:00 +0100
+published: true
+date: 2021-03-29 04:00:00 +0100
 layout: post
-title: "Mejoras Swagger parte 1"
-summary: " "
-excerpt: "A"
+title: "Sacando provecho de Swagger - parte 1"
+summary: "Comenzamos una serie de artículos dedicados a sacar el máximo partido de Swagger sobre nuestros proyectos y conseguir darle más valor a nuestras API"
+excerpt: "Sacando el máximo partido a nuestras APIs con Swagger - parte 1"
 categories: [Desarrollo]
-tags: [swagger]
-featured_image: /public/uploads/2021/02/15-Mejoras-Swagger-Parte1/swagger-banner.png
-pathToPublicFolder: "public/uploads/2021/02/15-Mejoras-Swagger-Parte1"
+tags: [swagger, aspnet, netcore]
+featured_image: /public/uploads/2021/03/29-Mejoras-Swagger-Parte1/swagger-banner.png
+pathToPublicFolder: "public/uploads/2021/03/29-Mejoras-Swagger-Parte1"
 author:
   name: "Antonio Cárdenas García"
   image: antonio_cardenas_garcia.jpg
   signText: "Consultant"
-  linkedin: https://www.linkedin.com/in/
-  twitter: https://twitter.com/
-  github: https://github.com/
+  linkedin: https://www.linkedin.com/in/acardenasdotnet/
+  twitter: 
+  github: https://github.com/toni90acg
 ---
-
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
 {% include code_image.html path=pathPublicFolder

@@ -1,23 +1,22 @@
 ---
-published: false
-date: 2021-03-16 01:00:00 +0100
+published: true
+date: 2021-04-26 04:00:00 +0100
 layout: post
-title: "Mejoras Swagger parte 3"
-summary: " "
-excerpt: "A"
+title: "Sacando provecho de Swagger - parte 3"
+summary: "3ª parte de la serie de artículos dedicados a Swagger. En esta ocasión abordando la definición de un content-type y Headers personalizados, sobre una api en NetCore."
+excerpt: "3ª parte de la serie de artículos dedicados a Swagger. Añadiendo Headers personalizados sobre una api en NetCore."
 categories: [Desarrollo]
-tags: [swagger]
-featured_image: /public/uploads/2021/03/16-Mejoras-Swagger-Parte3/swagger-banner.png
-pathToPublicFolder: "public/uploads/2021/03/16-Mejoras-Swagger-Parte3"
+tags: [swagger, aspnet, netcore]
+featured_image: /public/uploads/2021/04/26-Mejoras-Swagger-Parte3/swagger-banner.png
+pathToPublicFolder: "public/uploads/2021/04/26-Mejoras-Swagger-Parte3"
 author:
   name: "Antonio Cárdenas García"
   image: antonio_cardenas_garcia.jpg
   signText: "Consultant"
-  linkedin: https://www.linkedin.com/in/
-  twitter: https://twitter.com/
-  github: https://github.com/
+  linkedin: https://www.linkedin.com/in/acardenasdotnet/
+  twitter: 
+  github: https://github.com/toni90acg
 ---
-
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
 {% include code_image.html path=pathPublicFolder
@@ -130,3 +129,5 @@ image='despValores2.png'
 title='imagen despValores2'
 style=''
 %}
+
+Muchas gracias. Nos leemos en más artículos.

@@ -1,21 +1,19 @@
 ---
-published: false
-date: 2021-02-03 01:00:00 +0100
+published: true
+date: 2021-03-01 04:01:00 +0100
 layout: post
 title: "Añadir Swagger a Api Net Core"
 summary: "Te contamos como añadir Swagger a tu API de Net Core en 4 sencillos pasos. "
 excerpt: "Añadir Swagger a Api Net Core."
 categories: [Desarrollo]
 tags: [swagger, netcore, api]
-featured_image: /public/uploads/2021/02/03-Add-Swagger-To-Net-Core-Api/swaggerandcore.png
-pathToPublicFolder: "public/uploads/2021/02/03-Add-Swagger-To-Net-Core-Api"
+featured_image: /public/uploads/2021/03/01-Add-Swagger-To-Net-Core-Api/swaggerandcore.png
+pathToPublicFolder: "public/uploads/2021/03/01-Add-Swagger-To-Net-Core-Api"
 author:
   name: "Francisco Javier Lafuente"
   image: francisco_javier_lafuente_martinez.jpg
   signText: "Consultant"
-  linkedin: https://www.linkedin.com/in/
-  twitter: https://twitter.com/
-  github: https://github.com/
+  linkedin: https://www.linkedin.com/in/francisco-javier-lafuente-59680012a/
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 

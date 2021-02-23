@@ -1,12 +1,16 @@
 <style>
-    #cookie-notice {padding: 2px 10px; display: none; text-align: center; position: fixed; bottom: 0; width: 100%; background: #222; color: rgba(255,255,255,0.8);}
+    #cookie-notice {padding: 2px 10px; z-index: 100; 
+        display: none; 
+        text-align: center; position: fixed; bottom: 0; width: 100%; background: #222;
+        color: rgba(255,255,255,0.8);
+        }
     #cookie-notice a {cursor: pointer; margin-left: 5px;}
     @media (max-width: 767px) {
         #cookie-notice span {display: block; padding-top: 3px; margin-bottom: 5px;}
         #cookie-notice a {position: relative; bottom: 4px;}
     }
-    .btnOkCookie { background-color: forestgreen; }
-    #cookie-notice-accept{ color: #ffffff; }
+    #btnOkCookie { background-color: #a40a0a; padding: 5px 10px 5px 10px; }
+    #cookie-notice-accept{ color: #ffffff; cursor: pointer; }
     .column {  float: left; }
     .left {  width: 50%; }
     .right {  width: 50%; cursor: pointer; }
@@ -15,13 +19,30 @@
         display: table;
         clear: both;
     }
+    #cookie-notice-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
 </style>
-<div id="cookie-notice"><span>Usamos <em>cookies</em> para ir mejorando este sitio.</span>
+<!-- <div id="cookie-notice">
+    <span>Usamos 🍪cookies🍪 para nuestras métricas, ver si nuestro contenido es interesante e ir mejorando esta web.</span>
     <div class="row">
         <div class="column left">
-            <a href="/about" class="btn btn-primary btn-sm">Más info </a>         
+            <a href="#" class="btn btn-primary btn-sm">Más info </a>         
         </div>
         <div class="column right btnOkCookie">
+            <span id="cookie-notice-accept" class="btn btn-primary btn-sm">OK</span>
+        </div>
+    </div>
+</div> -->
+<div id="cookie-notice">
+    <div id="cookie-notice-content">
+        <div style="margin-right: 10px;">
+            Usamos 🍪cookies🍪 para nuestras métricas, ver si nuestro contenido es interesante e ir mejorando esta web.
+        </div>
+        <div id="btnOkCookie" >
             <span id="cookie-notice-accept" class="btn btn-primary btn-sm">OK</span>
         </div>
     </div>
@@ -49,16 +70,20 @@
     function eraseCookie(name) {
         createCookie(name,"",-1);
     }
+    function clickAcceptCookie() {
+        createCookie('cookie-notice-dismissed','true',1000);
+        document.getElementById('cookie-notice').style="display:none";
+    }
 
     if(readCookie('cookie-notice-dismissed')=='true') {
         //nada por ahora
     } else {
-
-        $('#cookie-notice').show();
+        document.getElementById('cookie-notice').style="display:block";
     }
-    $('#cookie-notice-accept , .btnOkCookie').click(function() {
-        createCookie('cookie-notice-dismissed','true',1000);
-        $('#cookie-notice').hide();
-    });
+    
+    document.getElementById('cookie-notice-accept').onclick = clickAcceptCookie;
+    document.getElementById('btnOkCookie').onclick = clickAcceptCookie;
+
+    
 
 </script>

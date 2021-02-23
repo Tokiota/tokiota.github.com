@@ -7,8 +7,8 @@ summary: "Este es un resumen largo del artículo que se usará de entradilla en 
 excerpt: "Una guía para hacer que nuestros artículos del blog brillen como es debido."
 categories: [Tokiota] # Desarrollo, Infraestructura, Bizpro, Management, Tokiotas, Eventos
 tags: [blog] # siempre en minisculas
-featured_image: /public/uploads/2020/10/20-guia-de-estilos-para-articulos/blog.jpg
-pathToPublicFolder: "public/uploads/2020/10/20-guia-de-estilos-para-articulos"
+featured_image: /public/uploads/draft/guia-de-estilos-para-articulos/blog.jpg
+pathToPublicFolder: "public/uploads/draft/guia-de-estilos-para-articulos"
 author:
   name: "Tokiota"
   image: tokiota.jpg
