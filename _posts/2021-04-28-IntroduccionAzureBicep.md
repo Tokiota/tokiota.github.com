@@ -97,7 +97,7 @@ Con esta plantilla podemos probar nuestro ejemplo usando **Azure CLI** desde el 
 content='Usar --confirm-with-what-if exige tener la última versión de Azure CLI, puedes optar a probar el ARM desde DevOps, por ejemplo.' 
 %}
 
-<pre data-enlighter-language="">  
+<pre data-enlighter-language="Powerhsell">  
 az deployment group create --resource-group 'tokiotajmfztest'
    --template-file main.json --confirm-with-what-if
 </pre>  
