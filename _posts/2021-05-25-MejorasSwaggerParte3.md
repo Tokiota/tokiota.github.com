@@ -1,14 +1,14 @@
 ---
 published: true
-date: 2021-04-26 04:00:00 +0100
+date: 2021-05-25 04:00:00 +0100
 layout: post
 title: "Sacando provecho de Swagger - parte 3"
 summary: "3ª parte de la serie de artículos dedicados a Swagger. En esta ocasión abordando la definición de un content-type y Headers personalizados, sobre una api en NetCore."
 excerpt: "3ª parte de la serie de artículos dedicados a Swagger. Añadiendo Headers personalizados sobre una api en NetCore."
 categories: [Desarrollo]
 tags: [swagger, aspnet, netcore]
-featured_image: /public/uploads/2021/04/26-Mejoras-Swagger-Parte3/swagger-banner.png
-pathToPublicFolder: "public/uploads/2021/04/26-Mejoras-Swagger-Parte3"
+featured_image: /public/uploads/2021/05/25-Mejoras-Swagger-Parte3/swagger-banner.png
+pathToPublicFolder: "public/uploads/2021/05/25-Mejoras-Swagger-Parte3"
 author:
   name: "Antonio Cárdenas García"
   image: antonio_cardenas_garcia.jpg

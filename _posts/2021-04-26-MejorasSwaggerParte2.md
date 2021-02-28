@@ -1,14 +1,14 @@
 ---
 published: true
-date: 2021-04-12 04:00:00 +0100
+date: 2021-04-26 04:00:00 +0100
 layout: post
 title: "Sacando provecho de Swagger - parte 2"
 summary: "Continuamos la serie de artículos dedicados a Swagger con esta segunda parte añadiendo ejemplos a los esquemas de datos."
 excerpt: "2ª de parte de artículos sobre Swagger y añadiendo ejemplos a nuestros esquemas"
 categories: [Desarrollo]
 tags: [swagger, aspnet, netcore]
-featured_image: /public/uploads/2021/04/12-Mejoras-Swagger-Parte2/swagger-banner.png
-pathToPublicFolder: "public/uploads/2021/04/12-Mejoras-Swagger-Parte2"
+featured_image: /public/uploads/2021/04/26-Mejoras-Swagger-Parte2/swagger-banner.png
+pathToPublicFolder: "public/uploads/2021/04/26-Mejoras-Swagger-Parte2"
 author:
   name: "Antonio Cárdenas García"
   image: antonio_cardenas_garcia.jpg
