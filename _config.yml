@@ -33,7 +33,7 @@ locale:           es_es
 encoding:         utf-8
 url:              https://blog.tokiota.com
 baseurl:          https://blog.tokiota.com/
-google_analytics: UA-XXXXXXXXX-X
+google_analytics: G-LDXREQ64QQ
 icon:             /public/img/defaulticon.jpg
 
 plugins: 
