@@ -1,14 +1,14 @@
 ---
 published: true
-date: 2021-04-28 04:00:00 +0100
+date: 2021-04-12 04:00:00 +0100
 layout: post
 title: "Introducción a Azure Bicep"
 summary: "Podria decirse que Bicep es el sucesor nativo de ARM. Logrará que nuestra IaC sea más sencilla, amigable y fácil de mantener."
 excerpt: "Azure ARM tiene sucesor y se llama Bicep. Descubre por qué."
 categories: [Desarrollo]
 tags: [iac, arm, bicep]
-featured_image: /public/uploads/2021/04/28-Introduccion-Azure-Bicep/logo.png
-pathToPublicFolder: "public/uploads/2021/04/28-Introduccion-Azure-Bicep"
+featured_image: /public/uploads/2021/04/12-Introduccion-Azure-Bicep/logo.png
+pathToPublicFolder: "public/uploads/2021/04/12-Introduccion-Azure-Bicep"
 author:
   name: "Jose María Flores Zazo"
   image: jose_maria_flores_zazo.jpg
