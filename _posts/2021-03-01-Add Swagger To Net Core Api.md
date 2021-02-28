@@ -3,7 +3,7 @@ published: true
 date: 2021-03-01 04:01:00 +0100
 layout: post
 title: "Añadir Swagger a Api Net Core"
-summary: "Te contamos como añadir Swagger a tu API de Net Core en 4 sencillos pasos. "
+summary: "Te contamos qué es Swagger y cómo podemos usar esta fantástica herramienta que nos ayuda a documentar y testear nuestras APIs. Cuatro sencillos pasos sobre en nuestro proyecto NetCore."
 excerpt: "Añadir Swagger a Api Net Core."
 categories: [Desarrollo]
 tags: [swagger, netcore, api]
