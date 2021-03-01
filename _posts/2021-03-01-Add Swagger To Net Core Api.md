@@ -13,7 +13,6 @@ author:
   name: "Francisco Javier Lafuente"
   image: francisco_javier_lafuente_martinez.jpg
   signText: "Development & Cloud Consultant"
-  linkedin: https://www.linkedin.com/in/francisco-javier-lafuente-59680012a/
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 

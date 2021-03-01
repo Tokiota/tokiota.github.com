@@ -12,10 +12,7 @@ pathToPublicFolder: "public/uploads/2021/04/26-Mejoras-Swagger-Parte2"
 author:
   name: "Antonio Cárdenas García"
   image: antonio_cardenas_garcia.jpg
-  signText: "Consultant"
-  linkedin: https://www.linkedin.com/in/acardenasdotnet/
-  twitter: 
-  github: https://github.com/toni90acg
+  signText: "Development & Cloud Consultant"
 ---
 
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}

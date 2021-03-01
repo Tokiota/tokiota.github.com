@@ -13,9 +13,6 @@ author:
   name: "David Gonzalo"
   image: david_gonzalo_pena.jpg
   signText: "Team Lead & Cloud Developer Consultant"
-  linkedin: https://www.linkedin.com/in/dagope/
-  twitter: https://twitter.com/dagope
-  github: https://github.com/dagope
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 

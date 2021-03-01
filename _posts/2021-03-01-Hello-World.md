@@ -14,9 +14,6 @@ author:
   name: "Tokiota"
   image: tokiota.jpg
   signText: "Tokiota Team"
-  linkedin: https://www.linkedin.com/in/tokiota/
-  twitter: https://twitter.com/Tokiota_IT
-  github: https://github.com/Tokiota
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
