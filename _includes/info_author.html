@@ -4,27 +4,5 @@
     <b>{{page.author.name}}</b>
     <br/>
     {{page.author.signText}}
-    <br/>
-    {% if page.author.twitter != blank %}
-    <a href="{{ page.author.twitter }}" target="_blank">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-twitter fa-stack-1x"></i>
-      </span>
-    </a>
-    {% endif %}
-    {% if page.author.linkedin %}
-    <a href="{{ page.author.linkedin }}" target="_blank">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-linkedin fa-stack-1x""></i>
-      </span>
-    </a>
-    {% endif %}
-    {% if page.author.github %}
-    <a href="{{ page.author.github }}" target="_blank">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-github fa-stack-1x"></i>
-      </span>
-    </a>
-    {% endif %}
   </span>
 </div>
