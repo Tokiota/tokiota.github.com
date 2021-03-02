@@ -25,7 +25,13 @@ title='Azure Bicep'
 style=''
 %}
 
-En el momento de la publicación de este artículo el desarrollo del producto esta en una fase inicial y sin soporte por parte de Azure, comenzará a tenerlo a partir de la versión 0.3.
+En el momento de la publicación de este artículo el desarrollo del producto esta en una fase inicial, pero con soporte por parte de Azure.
+
+Desde la versión 0.3.1, los puntos destacables son:
+
+•	Integración con Az CLI y Az PS.
+•	Deja de ser una herramienta experimental.
+• Compatible con los planes de soporte de Microsoft
 
 El propósito de Azure Bicep el siguiente:
 
