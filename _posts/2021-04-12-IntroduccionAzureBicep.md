@@ -12,7 +12,7 @@ pathToPublicFolder: "public/uploads/2021/04/12-Introduccion-Azure-Bicep"
 author:
   name: "Jose María Flores Zazo"
   image: jose_maria_flores_zazo.jpg
-  signText: "Consultant"
+  signText: "Development & Cloud Consultant"
   linkedin: https://www.linkedin.com/in/jmfloreszazo/
   twitter: https://www.twitter.com/jmfloreszazo/
   github: https://github.com/jmfloreszazo
