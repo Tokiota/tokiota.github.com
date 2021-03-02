@@ -6,13 +6,19 @@ title: "Introducción a Azure Bicep"
 summary: "Podria decirse que Bicep es el sucesor nativo de ARM. Logrará que nuestra IaC sea más sencilla, amigable y fácil de mantener."
 excerpt: "Azure ARM tiene sucesor y se llama Bicep. Descubre por qué."
 categories: [Desarrollo]
-tags: [iac, arm, bicep]
+tags: [iac, arm, bicep, azure]
 featured_image: /public/uploads/2021/04/12-Introduccion-Azure-Bicep/logo.png
 pathToPublicFolder: "public/uploads/2021/04/12-Introduccion-Azure-Bicep"
 author:
   name: "Jose María Flores Zazo"
   image: jose_maria_flores_zazo.jpg
   signText: "Development & Cloud Consultant"
+<<<<<<< HEAD
+=======
+  linkedin: https://www.linkedin.com/in/jmfloreszazo/
+  twitter: https://www.twitter.com/jmfloreszazo/
+  github: https://github.com/jmfloreszazo
+>>>>>>> UpdateStatusOfBiceps
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
@@ -22,7 +28,13 @@ title='Azure Bicep'
 style=''
 %}
 
-En el momento de la publicación de este artículo el desarrollo del producto esta en una fase inicial y sin soporte por parte de Azure, comenzará a tenerlo a partir de la versión 0.3.
+En el momento de la publicación de este artículo el desarrollo del producto esta en una fase inicial, pero con soporte por parte de Azure.
+
+Desde la versión 0.3.1, los puntos destacables son:
+
+•	Integración con Az CLI y Az PS.
+•	Deja de ser una herramienta experimental.
+• Compatible con los planes de soporte de Microsoft
 
 El propósito de Azure Bicep el siguiente:
 
