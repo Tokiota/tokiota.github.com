@@ -13,12 +13,6 @@ author:
   name: "Jose María Flores Zazo"
   image: jose_maria_flores_zazo.jpg
   signText: "Development & Cloud Consultant"
-<<<<<<< HEAD
-=======
-  linkedin: https://www.linkedin.com/in/jmfloreszazo/
-  twitter: https://www.twitter.com/jmfloreszazo/
-  github: https://github.com/jmfloreszazo
->>>>>>> UpdateStatusOfBiceps
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
