@@ -58,7 +58,7 @@ style=''
 
 1.	Instalar la herramienta CLI de Bicep (seguir las instrucciones: [https://github.com/Azure/bicep/blob/main/docs/installing.md](https://github.com/Azure/bicep/blob/main/docs/installing.md)).
 2.	Instalar la extensión de Visual Studio Code para Bicep. Es un paso opcional, pero mejora mucho nuestro trabajo con Bicep.
-3.	Abrir el fichero pack.bicep disponible en el repot de GitHub.
+3.	Abrir el fichero bicep disponible en el repot de GitHub.
 
 {% include code_image.html path=pathPublicFolder
 image='img02.png'
@@ -70,7 +70,7 @@ En el ejemplo anterior, donde creamos una Web App, para ARM usamos 68 líneas mi
 
 Podrás observar que la Web App no necesita que se declare explícitamente la dependencia con el Service Plan, basta con usar plan.id para inferir la dependencia. **Es más legible**.
 
-Por desgracia, aun no existe logiuna integración oficial de Bicep con Azure DevOps (solo algunas cosas experimentales). Pero todo hace pensar que seguirá la logica que se está aplicando con Terraform o Pulumi, ya que los comandos son muy parecidos a lo que ejecutan ambos sistemas:
+Por desgracia, aun no existe una integración oficial de Bicep con Azure DevOps (solo algunas cosas experimentales). Pero todo hace pensar que seguirá la logica que se está aplicando con Terraform o Pulumi, ya que los comandos son muy parecidos a lo que ejecutan ambos sistemas:
 
 {% include code_image.html path=pathPublicFolder
 image='img03.png'
