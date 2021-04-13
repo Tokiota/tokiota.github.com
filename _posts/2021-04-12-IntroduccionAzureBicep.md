@@ -26,9 +26,9 @@ En el momento de la publicación de este artículo el desarrollo del producto es
 
 Desde la versión 0.3.1, los puntos destacables son:
 
-•	Integración con Az CLI y Az PS.
-•	Deja de ser una herramienta experimental.
-• Compatible con los planes de soporte de Microsoft
+*	Integración con Az CLI y Az PS.
+*	Deja de ser una herramienta experimental.
+* Compatible con los planes de soporte de Microsoft
 
 El propósito de Azure Bicep el siguiente:
 
