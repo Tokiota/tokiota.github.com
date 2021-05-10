@@ -1,14 +1,14 @@
 ---
 published: true
-date: 2021-06-09 04:00:00 +0100
+date: 2021-07-06 04:00:00 +0100
 layout: post
 title: "Azure CLI extensión para Azure DevOps, continua documentando"
 summary: "Además de documentar con Azure CLI, tema tratado con anterioridad; podemos trabajar con Azure DevOps a través de una extensión que nos permitirá documentar y automatizar todo nuestro ecosistema."
 excerpt: "Poder generar a través de la linea de comando proyectos, variables y despliegues, etc. nos permitirá poder reproducir nuestro entorno en cuestión de minutos y reproducir el ecosistema con una certeza absoluta."
 categories: [Desarrollo]
 tags: [devops, cli, azure]
-featured_image: /public/uploads/2021/06/09-Azure-CLI-DevOps/logo.png
-pathToPublicFolder: "public/uploads/2021/06/09-Azure-CLI-DevOps"
+featured_image: /public/uploads/2021/07/06-Azure-CLI-DevOps/logo.png
+pathToPublicFolder: "public/uploads/2021/07/06-Azure-CLI-DevOps"
 author:
   name: "Jose María Flores Zazo"
   image: jose_maria_flores_zazo.jpg
@@ -26,11 +26,11 @@ style=''
 %}
 
 
-Parafraseando la apertura del articulo anterior: "El entorno gráfico del portal de Azure DevOps, cambia constantemente", es cierto que no tanto como el portal de Azure. Pero sirve para hacer hincapié en que estamos aproximadamente la misma situación.
+Parafraseando la apertura de mi anterior articulo sobre Azure CLI: "El entorno gráfico del portal de Azure DevOps, cambia constantemente", es cierto que no tanto como el portal de Azure. Pero sirve para hacer hincapié en que estamos aproximadamente la misma situación.
 
-Esta vez no se trata de documentar cambios, si no de preparar el entorno de nuestro proyecto y poder reproducirlo ante algun problema: borrado de una variable, modificación de alguna configuración de un despliegue, etc.
+Esta vez no se trata de documentar cambios, si no, de documentar como preparar el entorno de nuestro proyecto y poder reproducirlo ante algun problema: borrado de una variable, modificación de alguna configuración de un despliegue, etc. o simplemente para moverlo de tenant.
 
-Muy pocos desarrolladores conocen esta herramienta que lleva con nosotros aproximadamente un año: [Azure DevOps CLI](https://docs.microsoft.com/en-us/azure/devops/cli/?view=azure-devops)
+Muy pocos desarrolladores conocen esta extensión para la herramienta Azure CLI que lleva con nosotros aproximadamente un año: [Azure DevOps CLI](https://docs.microsoft.com/en-us/azure/devops/cli/?view=azure-devops)
 
 Para poder usarla primero debes tener instalado [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) y posteriormente añadir la extensión:
 
@@ -41,7 +41,6 @@ az extension add --name azure-devops
 A partir de este momento el trabajo es muy similar al que realizamos con Azure CLI:
 
 <pre data-enlighter-language="Powerhsell">  
-//Accedemos a nuestra organización
 az login
 </pre> 
 
@@ -83,8 +82,8 @@ PIPELINE_NAME=your-pipeline-name
 az pipelines create --name $PIPELINE_NAME --repository $REPOSITORY_NAME \
     --repository-type tfsgit --branch main --skip-first-run \
     --yml-path pipelines/your-pipeline-file.yml
-az pipelines variable create --pipeline-name $PIPELINE_NAME --name PIPELINE_VAR_1 --allow-override
---allow-override
+az pipelines variable create --pipeline-name $PIPELINE_NAME --name PIPELINE_VAR_1 \
+    --allow-override
 </pre> 
 
 Tambien podrás lanzar el pipeline desde CLI:
@@ -95,7 +94,7 @@ az pipelines run --name $PIPELINE_NAME \
     --variables PIPELINE_VAR_1=$VAR_1
 </pre> 
 
-Toda esta información puede ver usando el comando:
+Toda la información de la extensión podrás verla con el comando:
 
 <pre data-enlighter-language="Powerhsell">  
 az devops -h
@@ -105,4 +104,9 @@ Insisto, toda esta información debe estar incluida en el Readme del proyecto, c
 
 Espero que con esta breve introducción puedas dilucidar el potencial que ofrece usar la linea de comandos. Deliberadamente esta vez no he puesto ninguna captura de pantalla, ni siquiera para mostrar a que sección se corresponden en el portal de Azure DevOps.
 
-Nota: todos los ejemplo anteriores están preparados para usarlos con [WSL](https://docs.microsoft.com/es-es/windows/wsl/install-win10)
+
+{% include code_note.html 
+content='Todos los ejemplo anteriores están preparados para usarlos con WSL (https://docs.microsoft.com/es-es/windows/wsl/install-win10)'
+%}
+
+
