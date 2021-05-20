@@ -115,4 +115,4 @@ style=''
 
 Solo te faltaría escribir _y_ para desplegar la infraestructura.
 
-Como podrá haber visto es más secillo, fácil de leer y es nativo para Azure. Podria decirse que Bicep es el sucesor nativo de ARM. No pierdas de vista esta herramienta.
+Como podrá haber visto es más sencillo, fácil de leer y es nativo para Azure. Podría decirse que Bicep es el sucesor nativo de ARM. No pierdas de vista esta herramienta.
