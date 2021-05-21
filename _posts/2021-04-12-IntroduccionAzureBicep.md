@@ -37,7 +37,7 @@ El propósito de Azure Bicep el siguiente:
   
 A diferencia de [Terraform](https://www.terraform.io/) o [Pulumi](https://www.pulumi.com/), Bicep es específico de Azure. Podríamos pensar que Microsoft están creando una nueva generación de ARM.
 
-Si ya tienes esperiencia con Terraform o con Pulumi, podrás observar que el propósito de Bicep es similar a las ventajas que tenemos con Terraform o Pulumi: 
+Si ya tienes experiencia con Terraform o con Pulumi, podrás observar que el propósito de Bicep es similar a las ventajas que tenemos con Terraform o Pulumi: 
 
 * Menor número de líneas de código necesarias para crear un recurso en Azure que usando ARM.
 * Usan lenguajes o bien propios como Terraform (HCL) o bien el casi más te guste con Pulumi (puedes usar C#, JS, TS, Go …).
@@ -115,4 +115,4 @@ style=''
 
 Solo te faltaría escribir _y_ para desplegar la infraestructura.
 
-Como podrá haber visto es más secillo, fácil de leer y es nativo para Azure. Podria decirse que Bicep es el sucesor nativo de ARM. No pierdas de vista esta herramienta.
+Como podrá haber visto es más sencillo, fácil de leer y es nativo para Azure. Podría decirse que Bicep es el sucesor nativo de ARM. No pierdas de vista esta herramienta.
