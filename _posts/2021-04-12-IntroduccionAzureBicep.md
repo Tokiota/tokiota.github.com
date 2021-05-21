@@ -44,7 +44,7 @@ Si ya tienes esperiencia con Terraform o con Pulumi, podrás observar que el pro
 
 Parece que el propósito de Bicep es darnos a los desarrolladores una alternativa similar a Terraform o Pulumi nativa de Microsoft.
 
-El proyecto Biceps está en: [https://github.com/Azure/bicesp](https://github.com/Azure/bicesp){:target="_blank"}, suscríbete para estar al día.
+El proyecto Biceps está en: [https://github.com/Azure/bicep](https://github.com/Azure/bicep){:target="_blank"}, suscríbete para estar al día.
 
 Supongo que alguna vez has visto un ARM para generar un recurso de Azure y si no, aquí tienes un extracto:
 
