@@ -16,3 +16,7 @@ docker-compose up
 ``` 
 Esto nos levantaré el blog en http://localhost:4000/
 
+### Gracias a
+<a href="https://github.com/Tokiota/tokiota.github.com/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Tokiota/tokiota.github.com" />
+</a>
