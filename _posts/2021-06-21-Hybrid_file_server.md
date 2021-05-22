@@ -4,10 +4,10 @@ date: 2021-06-21 04:00:00 +0100
 layout: post
 title: "Hybrid File Server"
 summary: "La acumulación de archivos y documentos en nuestros servidores de ficheros puede ser preocupante, pues implica la necesidad de eliminar o archivar documentos para liberar espacio y/o ampliar cabina/discos. Esto se suele traducir en malestar por parte del usuario y/o en un desembolso económico. Conoce la solución que desde Tokiota te presentamos Hybrid File Server."
-excerpt: "Os traemos nuevo artículo donde conocer la solución Hybrid File Server. Olvídate de liberar espacio en tus servidores constantemente y de preocuparte por los backups, que Azure se encargue."
+excerpt: "Os traemos nuevo artículo donde conocer la solución Hybrid File Server. Olvídate de liberar espacio en tus servidores constantemente y de preocuparte por los backups, que Azure se encargue. #post #azuresync"
 categories: [Infraestructura]
 tags: [hybrid, fileserver, azure ]
-featured_image: /public/uploads/2021/06/21-hybrid-fil-server/diff_hybrid_file_server.jpg
+featured_image: /public/uploads/2021/06/21-hybrid-fil-server/azure_file_sync.jpg
 pathToPublicFolder: "public/uploads/2021/06/21-hybrid-fil-server"
 author:
   name: "Daniel Camacho Rodríguez"
@@ -17,7 +17,7 @@ author:
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
 {% include code_image.html path=pathPublicFolder
-image='diff_hybrid_file_server.jpg'
+image='azure_file_sync.jpg'
 title='Hybrid file Server'
 style=''
 %}
