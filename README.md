@@ -1,5 +1,11 @@
 # Tokiota Blog
+### Gracias a
+<a href="https://github.com/Tokiota/tokiota.github.com/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Tokiota/tokiota.github.com" />
+</a>
 
+
+### Unos shields por aquí
 ![GitHub deployments](https://img.shields.io/github/deployments/tokiota/tokiota.github.com/github-pages)
 
 ![GitHub contributors](https://img.shields.io/github/contributors/tokiota/tokiota.github.com)
@@ -9,14 +15,11 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/tokiota/tokiota.github.com)
 ![GitHub top language](https://img.shields.io/github/languages/top/tokiota/tokiota.github.com)
 
-# Localhost
+
+# ¿En mi máquina funciona?
 Para ejecutar localmente el blog necesitamos tener docker instalado y ejecutar en por línea de comandos.
 ```
 docker-compose up 
 ``` 
 Esto nos levantaré el blog en http://localhost:4000/
 
-### Gracias a
-<a href="https://github.com/Tokiota/tokiota.github.com/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Tokiota/tokiota.github.com" />
-</a>
