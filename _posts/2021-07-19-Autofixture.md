@@ -6,7 +6,7 @@ title: "Agiliza la escritura de tests con AutoFixture"
 summary: "Al escribir tests generalmente creamos objetos que representan el estado inicial y en algunas ocasiones crear estos objetos y sus dependencias se puede convertir en una tarea compleja y terminamos escribiendo código que no es relevante para el test, para optimizar esta tarea podemos apoyarnos en la librería AutoFixture cuyo principal beneficio es la creación de valores aleatorios e instancias con un mínimo esfuerzo."
 excerpt: "AutoFixture reduce el código necesario para representar el estado inicial de nuestros tests."
 categories: [Desarrollo]
-tags: [autofixture, xunit]
+tags: [autofixture, xunit, netcore, testing]
 featured_image: /public/uploads/2021/07/19-Autofixture/autofixture.png
 pathToPublicFolder: "public/uploads/2021/07/19-Autofixture"
 author:
@@ -22,7 +22,7 @@ title='Agiliza la escritura de tests con AutoFixture'
 style=''
 %}
 
-Al escribir tests generalmente creamos objetos que representan el estado inicial y **en algunas ocasiones crear estos objetos y sus dependencias se puede convertir en una tarea compleja** y terminamos escribiendo código que no es relevante para el test, **para optimizar esta tarea podemos apoyarnos en la librería <a href='https://github.com/AutoFixture/AutoFixture'>AutoFixture</a>** cuyo principal beneficio es la creación de valores aleatorios e instancias con un mínimo esfuerzo.
+Al escribir tests generalmente creamos objetos que representan el estado inicial y **en algunas ocasiones crear estos objetos y sus dependencias se puede convertir en una tarea compleja**, terminamos escribiendo código que no es relevante para el test. **Para optimizar esta tarea podemos apoyarnos en la librería [AutoFixture](https://github.com/AutoFixture/AutoFixture)** cuyo principal beneficio es la creación de valores aleatorios e instancias con un mínimo esfuerzo.
 
 
 ### Instalación
@@ -88,7 +88,7 @@ public void GivenNewDelivery_WhenDeliver__ThenAllProductsWereDelivered(AmazonDel
 
 Hemos reducido drásticamente el código necesario ya que el método Data no es necesario porque AutoFixture se encarga de llenar las propiedades con valores aleatorios.
 
-Una ventaja adicional es que **nuestros tests son más tolerantes a los cambios en nuestro código** ya que AutoFixture se encarga de resolver las dependencias de nuestras clases, de esta forma aunque modifiquemos el constructor de la clase, el código del test seguirá funcionando sin necesidad de modificarlo.
+Una ventaja adicional es que **nuestros tests son más tolerantes a los cambios en nuestro código** y AutoFixture se encarga de resolver las dependencias de nuestras clases, de esta forma aunque cambiemos el constructor de la clase, el código del test seguirá funcionando sin necesidad de modificarlo.
 
 ### Más Información
 
