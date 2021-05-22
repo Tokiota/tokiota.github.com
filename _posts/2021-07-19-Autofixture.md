@@ -1,14 +1,14 @@
 ---
 published: true
-date: 2021-05-30 04:00:00 +0100
+date: 2021-07-19 04:00:00 +0100
 layout: post
 title: "Agiliza la escritura de tests con AutoFixture"
 summary: "Al escribir tests generalmente creamos objetos que representan el estado inicial y en algunas ocasiones crear estos objetos y sus dependencias se puede convertir en una tarea compleja y terminamos escribiendo código que no es relevante para el test, para optimizar esta tarea podemos apoyarnos en la librería AutoFixture cuyo principal beneficio es la creación de valores aleatorios e instancias con un mínimo esfuerzo."
 excerpt: "AutoFixture reduce el código necesario para representar el estado inicial de nuestros tests."
 categories: [Desarrollo]
 tags: [autofixture, xunit]
-featured_image: /public/uploads/2021/05/30-Autofixture/autofixture.png
-pathToPublicFolder: "public/uploads/2021/05/30-Autofixture"
+featured_image: /public/uploads/2021/07/19-Autofixture/autofixture.png
+pathToPublicFolder: "public/uploads/2021/07/19-Autofixture"
 author:
   name: "Hector Escalante"
   image: hector_samuel_escalante_albarran.jpg

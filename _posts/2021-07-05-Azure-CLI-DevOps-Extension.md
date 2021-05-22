@@ -1,14 +1,14 @@
 ---
 published: true
-date: 2021-07-06 04:00:00 +0100
+date: 2021-07-05 04:00:00 +0100
 layout: post
 title: "Azure CLI extensión para Azure DevOps, continua documentando"
 summary: "Además de documentar con Azure CLI, tema tratado con anterioridad; podemos trabajar con Azure DevOps a través de una extensión que nos permitirá documentar y automatizar todo nuestro ecosistema."
 excerpt: "Poder generar a través de la linea de comando proyectos, variables y despliegues, etc. nos permitirá poder reproducir nuestro entorno en cuestión de minutos y reproducir el ecosistema con una certeza absoluta."
 categories: [Desarrollo]
 tags: [devops, cli, azure]
-featured_image: /public/uploads/2021/07/06-Azure-CLI-DevOps/logo.png
-pathToPublicFolder: "public/uploads/2021/07/06-Azure-CLI-DevOps"
+featured_image: /public/uploads/2021/07/05-Azure-CLI-DevOps/logo.png
+pathToPublicFolder: "public/uploads/2021/07/05-Azure-CLI-DevOps"
 author:
   name: "Jose María Flores Zazo"
   image: jose_maria_flores_zazo.jpg
@@ -26,9 +26,9 @@ style=''
 %}
 
 
-Parafraseando la apertura de mi anterior articulo sobre Azure CLI: "El entorno gráfico del portal de Azure DevOps, cambia constantemente", es cierto que no tanto como el portal de Azure. Pero sirve para hacer hincapié en que estamos aproximadamente la misma situación.
+Parafraseando la apertura de mi [anterior artículo sobre Azure CLI]({{ site.baseurl }}2021/05/10/Azure-CLI/): *"El entorno gráfico del portal de Azure DevOps, cambia constantemente"*, es cierto que no tanto como el portal de Azure. Pero sirve para hacer hincapié en que estamos aproximadamente en la misma situación.
 
-Esta vez no se trata de documentar cambios, si no, de documentar como preparar el entorno de nuestro proyecto y poder reproducirlo ante algun problema: borrado de una variable, modificación de alguna configuración de un despliegue, etc. o simplemente para moverlo de tenant.
+Esta vez no se trata de documentar cambios, si no, de documentar como preparar el entorno de nuestro proyecto y poder reproducirlo ante algún problema: borrado de una variable, modificación de alguna configuración de un despliegue, etc. o simplemente para moverlo de *tenant*.
 
 Muy pocos desarrolladores conocen esta extensión para la herramienta Azure CLI que lleva con nosotros aproximadamente un año: [Azure DevOps CLI](https://docs.microsoft.com/en-us/azure/devops/cli/?view=azure-devops)
 
@@ -86,7 +86,7 @@ az pipelines variable create --pipeline-name $PIPELINE_NAME --name PIPELINE_VAR_
     --allow-override
 </pre> 
 
-Tambien podrás lanzar el pipeline desde CLI:
+También podrás lanzar el pipeline desde CLI:
 
 <pre data-enlighter-language="Powerhsell">  
 VAR_1=your-value
@@ -100,13 +100,13 @@ Toda la información de la extensión podrás verla con el comando:
 az devops -h
 </pre> 
 
-Insisto, toda esta información debe estar incluida en el Readme del proyecto, con unos comandos tan simples te ahorras ir navegando por las distintas opciones del entorno gráfico, tomado capturas y añadiendo anotaciones.
+Insisto, toda esta información debe estar incluida en el Readme del proyecto. Con unos comandos tan simples te ahorras ir navegando por las distintas opciones del entorno gráfico, tomado capturas y añadiendo anotaciones.
 
-Espero que con esta breve introducción puedas dilucidar el potencial que ofrece usar la linea de comandos. Deliberadamente esta vez no he puesto ninguna captura de pantalla, ni siquiera para mostrar a que sección se corresponden en el portal de Azure DevOps.
+Espero que con esta breve introducción puedas dilucidar el potencial que ofrece usar la línea de comandos. Deliberadamente esta vez no he puesto ninguna captura de pantalla, ni siquiera para mostrar a que sección se corresponden en el portal de Azure DevOps.
 
 
 {% include code_note.html 
-content='Todos los ejemplo anteriores están preparados para usarlos con WSL (https://docs.microsoft.com/es-es/windows/wsl/install-win10)'
+content='Todos los ejemplo anteriores están preparados para usarlos con <a href="https://docs.microsoft.com/es-es/windows/wsl/install-win10">WSL</a>'
 %}
 
 
