@@ -6,20 +6,19 @@ title: Home
 {% for post in paginator.posts %}
   <article class="entry">
     <div class="entry-header">
-      <figure class="entry-thumb">
-        <img src="{{ post.featured_image }}" alt="Imagen portada del artículo">
+      <figure class="entry-thumb" style="background-image:url({{ post.featured_image }});">
+        <!-- <img src="{{ post.featured_image }}" alt="Imagen portada del artículo"> -->
       </figure>
       <header class="entry-content-titlle">
-        <h4 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
         <div class="entry-meta">
-          <span class="post-date">{% include code_date.html date=post.date %}</span>
-          <br>por <span class="post-author-name">{{ post.author.name }}</span>
+          <span class="post-date">{% include code_date.html date=post.date %}</span> por <span class="post-author-name">{{ post.author.name }}</span>
+        </div>
+        <h4 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+        <div class="entry-content">
+          <p>{{ post.summary }}</p>
+          <a href="{{ post.url }}" class="myButton">Leer más &rsaquo;&rsaquo; </a>
         </div>
       </header>
-    </div>
-    <div class="entry-content">
-      <p>{{ post.summary }}</p>
-      <a href="{{ post.url }}" class="myButton">Leer más &rsaquo;&rsaquo; </a>
     </div>
   </article>
 {% endfor %}
