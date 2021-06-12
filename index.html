@@ -30,18 +30,40 @@ title: Home
     <i class="fa fa-star" aria-hidden="true"></i> DESTACADOS
   </span>
 </div>
+{% assign posts-pineds = site.posts | where: "pined", true | sort: 'pinedOrder' %}
+{% for post in posts-pineds limit: 5 %}
+  <li>{{post.title}}</li>
+{% endfor %}
 
+<!-- Filter recent posts  -->
 <div class="cab-separador">
   <span>
     <i class="fa fa-calendar-check-o" aria-hidden="true"></i> POSTS RECIENTES
   </span>
 </div>
+{% assign posts-recents = site.posts | sort: 'date' | reverse %}
+{% for post in posts-recents limit: 5 %}
+  <li>{{post.title}}</li>
+{% endfor %}
+
 
 <div class="cab-separador">
   <span>
     <i class="fa fa-rocket" aria-hidden="true"></i> HISTORIAS INSPIRADORAS
   </span>
 </div>
+<!-- Filter post with multiple conditions: This sample use OR conditional -->
+{% assign posts-stories-pattern = "" | split: ',' %}
+{% for post in site.posts %}
+{%  if post.categories contains "Infraestructura" or post.categories contains "Tokiota" %}
+{%    assign posts-stories-pattern = posts-stories-pattern | push:post %}
+{%  endif %}
+{% endfor %}
+{% assign posts-stories = posts-stories-pattern | sort:"date" | reverse %}
+{% for post in posts-stories limit: 5 %}
+  <li>{{post.title}}</li>
+{% endfor %} 
+
 
 <!-- PAGINACION -->
 <div class="pagination">

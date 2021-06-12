@@ -16,6 +16,8 @@ exclude: [vendor]
 
 # Setup
 name:             "Tokiota"
+ownerName:        "Tokiota S.L."
+contactEmail:     "tokiota@tokiota.com"
 url:              https://tokiota.com
 twitter:          Tokiota_IT
 facebook:         https://es-es.facebook.com/tokiota.es

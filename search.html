@@ -1,0 +1,25 @@
+---
+layout: page
+permalink: /search/
+title: Buscar
+---
+
+<p>Utiliza este buscador he intentaremos mostrarte lo que estas buscando: </p>
+<em title="Diez personas, diez colores. / Para gustos, los colores.">十人十色</em>
+
+<div class="search-section">
+  <input type="text" id="search-input" class="search-input" placeholder="Buscar...">
+  <div id="search-container">
+    <ul id="results-container"></ul>
+  </div>
+  <!-- Script pointing to jekyll-search.js -->
+  <script type="text/javascript">
+    SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '/search.json',
+      noResultsText: 'Vaya :( no hay resultado sobre lo que esperabas. 見ぬが花',
+      limit: 10,
+    })
+  </script>
+</div>
