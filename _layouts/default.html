@@ -8,26 +8,36 @@
     <div class="navigation-fixed">
       {% include navigation.html %}
     </div>
-    <div class="grid-container">
-      <header class="header">
-        {% include header.html %}
-      </header>
 
-      <div class="containerMain">
-        <main class="main">
+    <header class="header">
+      {% include header.html %}
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-10">
           {{ content }}
-        </main>
-      
-        <div class="sidebar sidebar-right">
+        </div>
+        <div class="col-2">
           {% include sidebar_right.html %}
         </div>
       </div>
-      
-      <footer class="footer">
-        {% include footer.html %}
-      </footer>
-
     </div>
+
+    <!-- <div class="containerMain">
+      <main class="main">
+        {{ content }}
+      </main>
+    
+      <div class="sidebar sidebar-right">
+        {% include sidebar_right.html %}
+      </div>
+    </div> -->
+    
+    <footer class="footer">
+      {% include footer.html %}
+    </footer>
+
     
   </body>  
   
