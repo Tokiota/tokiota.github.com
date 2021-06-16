@@ -1,7 +1,8 @@
 <div class="navigation-left">
-    <a href="{{ site.baseurl }}search">
-        <i class="fa fa-search" aria-hidden="true"></i>
-    </a>
+  <div class="search-box">
+    <button class="btn-search"><i class="fa fa-search"></i></button>
+    <input type="text" class="input-search" placeholder="¿Qué quieres buscar...?" onclick="{{ site.baseurl }}search">
+  </div>
 </div>
 
 <div class="navigation-right">
