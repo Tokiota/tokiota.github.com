@@ -7,7 +7,7 @@ title: Home
   <div class="container">
     <div class="row">
       <!-- Filter principal post  -->
-      {% assign posts-pineds = site.posts | where: "pined", true | sort: 'pinedOrder' %}
+      {% assign posts-pineds = site.posts | where: "onTop", true | sort: 'date' | reverse %}
       {% for post in posts-pineds limit: 1 %}
         <div class="col-12 mb-3">
           <div class="card">
@@ -45,7 +45,7 @@ title: Home
       </div>
       <!-- Filter destacados posts  -->
       {% assign posts-pineds = site.posts | where: "pined", true | sort: 'pinedOrder' %}
-      {% for post in posts-pineds limit: 5 %}
+      {% for post in posts-pineds limit: 2 %}
         <div class="col-6 mb-3">
           <div class="card h-100">
             <div class="card-img-box" style="background-image:url({{ post.featured_image }});"></div>
@@ -79,7 +79,7 @@ title: Home
       </div>
       <!-- Filter recent posts  -->
       {% assign posts-recents = site.posts | sort: 'date' | reverse %}
-      {% for post in posts-recents limit: 5 %}
+      {% for post in posts-recents limit: 6 %}
         <div class="col-4 mb-3">
           <div class="card h-100">
             <div class="card-img-box" style="background-image:url({{ post.featured_image }});"></div>
