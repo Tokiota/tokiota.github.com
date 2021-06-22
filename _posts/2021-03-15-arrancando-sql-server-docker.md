@@ -16,11 +16,16 @@ author:
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
-{% include code_image.html path=pathPublicFolder
+{% include code_image_cab_post.html path=pathPublicFolder
 image='sqlserver_docker_min.png'
 title='SQL Server + Docker'
 style=''
 %}
+
+{% include
+code_data_post.html
+%}
+
 Si quieres arrancar rápidamente un SQL Server lo mejor es usar docker. Y con más razón si ya tienes WSL2 instalado 😀, y si todavía no lo tienes échale un vistazo a la [guía de instalación](https://docs.microsoft.com/es-es/windows/wsl/install-win10).
 Esto puede resultar muy útil para no tener que instalar un entorno completo localmente.
 En la [documentación oficial](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&pivots=cs1-bash) tienes toda la info. Yo lo he resumido con algunos cambios aquí:

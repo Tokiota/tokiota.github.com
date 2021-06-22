@@ -16,10 +16,14 @@ author:
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
-{% include code_image.html path=pathPublicFolder
+{% include code_image_cab_post.html path=pathPublicFolder
 image='swagger-banner.png'
-title='Mejoras Swagger parte 1'
+title='Mejoras Swagger parte 3'
 style=''
+%}
+
+{% include
+code_data_post.html
 %}
 
 Ya tenemos el tercer post de la serie, ya hemos visto comentarios XML y los ISchemaFilter. Hoy veremos content-type y headers.	

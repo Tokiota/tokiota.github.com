@@ -16,10 +16,14 @@ author:
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
-{% include code_image.html path=pathPublicFolder
+{% include code_image_cab_post.html path=pathPublicFolder
 image='swaggerandcore.jpg'
 title='Add Swagger to Net Core Api'
 style=''
+%}
+
+{% include
+code_data_post.html
 %}
 
 ### ¿Qué es swagger?

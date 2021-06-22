@@ -16,10 +16,14 @@ author:
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
-{% include code_image.html path=pathPublicFolder
+{% include code_image_cab_post.html path=pathPublicFolder
 image='autofixture.png'
 title='Agiliza la escritura de tests con AutoFixture'
 style=''
+%}
+
+{% include
+code_data_post.html
 %}
 
 Al escribir tests generalmente creamos objetos que representan el estado inicial y **en algunas ocasiones crear estos objetos y sus dependencias se puede convertir en una tarea compleja**, terminamos escribiendo código que no es relevante para el test. **Para optimizar esta tarea podemos apoyarnos en la librería [AutoFixture](https://github.com/AutoFixture/AutoFixture)** cuyo principal beneficio es la creación de valores aleatorios e instancias con un mínimo esfuerzo.

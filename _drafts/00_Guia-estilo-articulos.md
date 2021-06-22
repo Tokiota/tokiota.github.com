@@ -16,10 +16,14 @@ author:
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
-{% include code_image_cab_post.html path=pathPublicFolder 
-image='imagen-01.jpg'
-title='Como descargar la imagen desde outlook web'
+{% include code_image_cab_post.html path=pathPublicFolder
+image='blog.jpg'
+title='Imagen de portada'
 style=''
+%}
+
+{% include
+code_data_post.html
 %}
 
 
