@@ -16,11 +16,18 @@ author:
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
+{% include code_image_cab_post.html path=pathPublicFolder 
+image='imagen-01.jpg'
+title='Como descargar la imagen desde outlook web'
+style=''
+%}
+
+
 Esta entrada de blog sirve a modo de guía de estilos y recursos a usar para hacer que los artículos brillen correctamente.
 Para ver como se escribe cada sección, accede al código de este fichero <b>00_Guía-estilo.artículos.md</b>. 
 Este mismo fichero no deja de ser un artículo en sí mismo para usar de modelo.
 
-Aquí tienes un índice de la guía:
+<b>Aquí tienes un índice de la guía:</b>
 <!-- TOC -->
 
 - [Antes de empezar](#antes-de-empezar)
@@ -38,17 +45,17 @@ Aquí tienes un índice de la guía:
 
 <!-- /TOC -->
 
-# Antes de empezar
+## Antes de empezar
 <b>Escribe el artículo</b>
 Olvídate de esta guía y de la maquetación en *Markdown*. Escribe el artículo en un Word, sin faltas de ortografía, envíaselo a tu TeamLead o responsable (porque dos ojos siempre ayudan). Cuando lo tengas listo, vuelve aquí y lo maquetamos.
 
-# Cómo empiezo
+## Cómo empiezo
 Bien, si has llegado hasta aquí, es que ya tienes tu artículo escrito y revisado.
 
 Crea un fichero en blanco sobre la carpeta _post con la siguiente nomenclatura:
 <br/><b>yyyy-MM-dd-mi-titulo-del-articulo.md</b>.
 
-# Metadatos del artículo
+## Metadatos del artículo
 Todo artículo necesita especificar unos datos que se sitúan al inicio del fichero y se delimitan entre dos líneas con tres guiones.
 <pre data-enlighter-language="raw">
 ---
@@ -97,7 +104,7 @@ A continuación explico cada uno:
 Tras los `---` tenemos definido una variable de página:
 - <b>pathPublicFolder</b>: será usada para incluir una imágen o cualquier enlace a fichero ya que es una url a la carpeta donde se alojar imágenes o ficheros adjuntos usados en artículo.
 
-# Qué foto pongo para el autor
+## Qué foto pongo para el autor
 Primero busca la imagen en <b>public/img/authors</b>, puede que ya exista.
 
 Si hay que añadir una nueva, mi consejo es descargar la imagen que sale con tu usuario en Teams.
@@ -114,7 +121,7 @@ title='Como descargar la imagen desde outlook web'
 style=''
 %}
 
-# Cómo se ponen los títulos
+## Cómo se ponen los títulos
 Así se escriben los títulos
 <pre data-enlighter-language="markdown">
 # Esto es un Título 1
@@ -131,8 +138,10 @@ y así salen:
 #### Esto es un Título 4
 ##### Esto es un Título 5
 ###### Esto es un Título 6
+<br>
+<br>
 
-# Estilos de letras:
+## Estilos de letras
 Hay dos maneras
 - Formato Markdown
 <pre data-enlighter-language="markdown">
@@ -146,7 +155,7 @@ Hay dos maneras
 <b>Negrita</b>
 </pre>
 
-# Cómo añadir un enlace
+## Cómo añadir un enlace
 Esto lo haremos por nomenclatura Markdown. 
 Pero intentaremos seguir lo siguiente:
 <pre data-enlighter-language="markdown">
@@ -154,7 +163,7 @@ Pero intentaremos seguir lo siguiente:
 </pre>
 
 
-# Cómo añadir una imágen
+## Cómo añadir una imágen
 La forma más facil de insertar una imágen es haciendo uso del siguietne fragmento de código indicando el fichero de la imagen y el texto alternativo:
 <pre data-enlighter-language="markdown">
 {{ "
@@ -183,7 +192,7 @@ Es importante que el nombre de la carpeta sea en <b>minúsculas</b> y <b>sin esp
 content='Siempre puedes hacer uso de código html para incluir imágenes de urls externas pero evitaremos esta práctica en la medida de lo posible porque si la url externa cambia o desaparece el artículo pierde valor. Sería mejor hacer una copia a nuestra carpeta y citar fuente/autor.'
 %}
 
-# Cómo añadir notas
+## Cómo añadir notas
 Para insertar una nota como esta:
 
 {% include code_note.html 
@@ -198,7 +207,7 @@ content='Aquí escribe el texto.'
 " }}%}
 </pre>
 
-# Cómo añadir fragmentos de código
+## Cómo añadir fragmentos de código
 
 Para visualizar un fragmento de código así:
 <pre data-enlighter-language="csharp">
@@ -283,7 +292,7 @@ Es recomendable no usar [Gist](https://gist.github.com/){:target="_blank"} para 
 Es por ello que él código que se quiera explicar <b>debe incluirse en el artículo.</b> 
 Si queremos dejar un ejemplo completo de un proyecto es recomendable abrir uno en  GitHub sobre la cuenta de organización de Tokiota.
 
-# Cómo escribir una tabla de datos
+## Cómo escribir una tabla de datos
 La recomendación es hacerlo en formato html porque el markdown a veces no renderiza por culpa de algun carácter.
 <pre data-enlighter-language="html">
 <table class="simpleTable">
@@ -300,8 +309,6 @@ La recomendación es hacerlo en formato html porque el markdown a veces no rende
 </table>
 </pre>
 
-
-<hr>
 Si crees que puedes mejorar la guía bienvenido sea. Toda mejora será bienvenida.
 
 Saludos!

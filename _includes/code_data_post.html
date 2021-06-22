@@ -1,0 +1,11 @@
+<div class="col-12 col-md-4 no-padding bgGreyLight d-flex align-items-center mb-4">
+  <div class="p-5 d-flex align-items-center">
+    <div class="post-cab">
+      <img alt="{{page.author.name}}" src="/public/img/authors/{{page.author.image}}">
+    </div>
+    <div class="d-inline">
+      <span class="post-author">por <a href="#infoAuthor">{{ page.author.name }}</a></span>
+      <span class="post-date">{% include code_date.html date=page.date %} &#903; {% include read_time.html %}</span>
+    </div>
+  </div>
+</div>

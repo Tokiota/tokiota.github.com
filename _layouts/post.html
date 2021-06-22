@@ -3,32 +3,42 @@ layout: default
 
 ---
 
-<div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-author">por <a href="#infoAuthor">{{ page.author.name }}</a></span>
-  <span class="post-date">{% include code_date.html date=page.date %} &#903; {% include read_time.html %}</span>
-  
-  <hr>
-  {{ content }}
-</div>
+<section class="post p-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+          <h1 class="post-title mb-4">{{ page.title }}</h1>
+      </div>
 
-<hr style="border-color: #eee;"/>
-
-<h4>Escrito por:</h4>
-{% include info_author.html %}
-
-
-<hr style="border-color: #eee;"/>
-<h4>Comparte esto:</h4>
-
-{% assign customTitle = page.title | append: ' by @' | append: site.twitter %}
-{% assign fullUrl = site.url | append: page.url %}
-{% include post_share_section.html 
-  customTitle=customTitle
-  fullUrl=fullUrl
-%}
-
-
+      <div class="col-12 post-body mb-5">
+        <div class="row">
+          {{ content }}
+        </div>
+      </div>
+        
+      <div class="col-6 bgGreyLight">
+        {% include info_author.html %}
+      </div>        
+      <div class="col-6 bgGreyMedium d-flex align-items-center">
+        <div>
+          <h6>
+            <strong>
+              Compartelo por:
+            </strong>
+          </h6>
+          <p>
+            {% assign customTitle = page.title | append: ' by @' | append: site.twitter %}
+            {% assign fullUrl = site.url | append: page.url %}
+            {% include post_share_section.html 
+              customTitle=customTitle
+              fullUrl=fullUrl
+            %}
+          </p>
+        </div>
+      </div>  
+    </div>
+  </div>
+</section>
 
 
  
