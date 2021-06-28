@@ -9,7 +9,7 @@ title: Home
       <!-- Filter principal post  -->
       {% assign posts-pineds = site.posts | where: "onTop", true | sort: 'date' | reverse %}
       {% for post in posts-pineds limit: 1 %}
-        <div class="col-12 mb-3">
+        <div class="col-12 mt-4 mt-md-0 mb-3">
           <div class="card">
             <div class="card-img-box" style="background-image:url({{ post.featured_image }});"></div>
             <div class="card-body">
@@ -46,7 +46,7 @@ title: Home
       <!-- Filter destacados posts  -->
       {% assign posts-pineds = site.posts | where: "pined", true | sort: 'pinedOrder' %}
       {% for post in posts-pineds limit: 2 %}
-        <div class="col-6 mb-3">
+        <div class="col-12 col-sm-6 mb-3">
           <div class="card h-100">
             <div class="card-img-box" style="background-image:url({{ post.featured_image }});"></div>
             <div class="card-body">
@@ -80,7 +80,7 @@ title: Home
       <!-- Filter recent posts  -->
       {% assign posts-recents = site.posts | sort: 'date' | reverse %}
       {% for post in posts-recents limit: 6 %}
-        <div class="col-4 mb-3">
+        <div class="col-12 col-sm-6 col-lg-4 mb-3">
           <div class="card h-100">
             <div class="card-img-box" style="background-image:url({{ post.featured_image }});"></div>
             <div class="card-body">
@@ -145,7 +145,7 @@ title: Home
       {% endfor %}
       {% assign posts-stories = posts-stories-pattern | sort:"date" | reverse %}
       {% for post in posts-stories limit: 2 %}
-        <div class="col-6 mb-3">
+        <div class="col-12 col-sm-6 mb-3">
           <div class="card h-100">
             <div class="card-img-box" style="background-image:url({{ post.featured_image }});"></div>
             <div class="card-body">

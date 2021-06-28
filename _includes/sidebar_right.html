@@ -1,19 +1,19 @@
 <section class="sidebar-main">
-  <div class="row">
+  <div class="row mb-sm-3 mb-md-0">
     <div class="sidebar-section">
-      <h3 class="mb-3">Categorías</h3>
+      <h3 class="mb-1 mb-md-3">Categorías</h3>
       <div id="archives">
         {% assign sortedCategories = site.categories | sort %}
         {% for category in sortedCategories %}
           <div class="archive-group">
             {% capture category_name %}{{ category | first }}{% endcapture %}
-            <a class="mb-3" href="/categories/#{{ category_name }}">{{ category_name }} ({{ site.categories[category_name].size }})</a>      
+            <a class="mb-0 mb-sm-3" href="/categories/#{{ category_name }}">{{ category_name }} ({{ site.categories[category_name].size }})</a>      
           </div>
         {% endfor %}
       </div>
     </div>
   </div>
-  <div class="row mt-5">
+  <div class="row mt-0 mt-md-5">
     <div class="sidebar-section">
       {% if page.layout == 'post' %}
         {% include last_posts.html %}
