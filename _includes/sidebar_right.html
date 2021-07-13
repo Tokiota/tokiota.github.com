@@ -1,6 +1,6 @@
 <section class="sidebar-main">
   <div class="row mb-sm-3 mb-md-0">
-    <div class="sidebar-section">
+    <div class="sidebar-section text-center col-12">
       <h3 class="mb-1 mb-md-3">Categorías</h3>
       <div id="archives">
         {% assign sortedCategories = site.categories | sort %}
@@ -11,13 +11,6 @@
           </div>
         {% endfor %}
       </div>
-    </div>
-  </div>
-  <div class="row mt-0 mt-md-5">
-    <div class="sidebar-section">
-      {% if page.layout == 'post' %}
-        {% include last_posts.html %}
-      {% endif %}
     </div>
   </div>
 </section>
