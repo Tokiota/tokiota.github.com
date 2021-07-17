@@ -7,7 +7,7 @@
         {% for category in sortedCategories %}
           <div class="archive-group">
             {% capture category_name %}{{ category | first }}{% endcapture %}
-            <a class="mb-0 mb-sm-3" href="/categories/#{{ category_name }}">{{ category_name }} ({{ site.categories[category_name].size }})</a>      
+            <a class="mb-0 mb-sm-3" href="/categories/#{{ category_name }}">{{ category_name }} <small>[{{ site.categories[category_name].size }}]</small></a>
           </div>
         {% endfor %}
       </div>

@@ -54,7 +54,7 @@ h4.card-title a {color: #000;font-size: 16px;font-weight: 700;}
 .post-principal .card-img-box {width:60%;min-height: 300px;float: left;}
 .post-principal .card-body {width:40%;padding:1.5em;margin:0;float: right;display: flex;align-items: center;}
 .post-principal h4.card-title a {font-size: 22px;}
-.post-principal .post-info,.post-date,.post-author-name {font-size: 10px;}
+.post-principal .post-info,.post-date,.post-author-name {font-size: 14px;}
 .post-principal .card-text {font-size: 13px;-webkit-line-clamp:6;}
 
 .pagination {min-height:175px;background-image:url(../my-images/bg-pagination.jpg);background-position:center center;background-size:cover;background-repeat: no-repeat;position: relative;width:100%;overflow-x: hidden;}
@@ -68,19 +68,23 @@ a.pagination-item:hover {opacity:1;text-decoration: none!important;background-co
 .sidebar-main {background:rgba(255,255,255, 1);padding:1em;border: 1px solid #e6e6e6!important}
 .sidebar-section {padding:0;background-color: transparent !important;margin: 0;min-height:0;}
 .sidebar-section h3 {font-weight: 700;font-size: 24px;color: #000;}
-.sidebar-section a {color: #999999;display:block;font-size: 14px;line-height: 1.2;}
-.sidebar-section a:hover {color: #C00000;}
+.sidebar-section a {color: #2b2b2b;display:block;font-size: 20px;line-height: 1.2;}
+.sidebar-section a:hover {color: #C00000; text-decoration: none;}
 .search h4 {color: #000;}
 .search-section {margin: 3rem auto 0 auto;}
 .search-section label {font-size:24px;display: inline-block;margin-right: 10px;}
 .search img {width:100%;border:solid #fff 2px;border-radius: 6px;}
 .search-input {border-radius: 0px;background-color: transparent;transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);outline: none;border-style: none;border-bottom:1px solid rgba(0,0,0,1);width: 90%;display: inline-block;}
-#search-container ul {padding-left:0;list-style: none;}
-#search-container ul li a {color: #999999;display:block;font-size: 14px;}
+#search-container ul {padding-left:20px; list-style: hiragana; text-align: start;}
+#search-container ul li a {color: #000000;display:block;font-size: 14px;}
 #search-container ul li a:hover {color: #C00000;text-decoration: underline;}
 #archives {width: 100%;display: flex;justify-content: center;}
 .archive-group {margin-right: 1em;}
 
+.afterpost-section {padding:0;background-color: transparent !important;margin: 0;min-height:0;}
+.afterpost-section h3 {font-weight: 700;font-size: 24px;color: #000;}
+.afterpost-section a {color: #999999;display:block;font-size: 16px; line-height: 1.2;}
+.afterpost-section a:hover {color: #C00000;}
 
 .search-box{width: fit-content;height: fit-content;position: relative;}
 .input-search{height: 50px;width: 50px;border-style: none;padding: 10px;font-size: 18px;letter-spacing: 2px;outline: none;transition: all .5s ease-in-out;background-color: transparent;padding-right: 40px;color:#000;}
@@ -101,6 +105,7 @@ button.btn-search:focus {outline-color: transparent !important; outline-style: n
 .post-body ul {width:100% !important;}
 .post-body  ul li a,.post-body a {color: #000;text-decoration:underline;}
 .post-body  ul li a:hover,.post-body a:hover {color: #C00000;text-decoration: underline;}
+.post-body .row p, h1, h2, h3, h4, h5, h6 { padding: 5px; }
 
 .post-cab img {width: 60px!important;height:  60px!important;border-radius:30px;display: inline!important;margin-right: 15px;border: solid 2px #fff;box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);}
 .post-author {font-size: 14px;}
@@ -182,8 +187,9 @@ a.linkedin, a.twitter {background: #0e76a8;color: #fff;padding-top: 7px;font-siz
     .card h4 {line-height: 0.9!important;}
     .sidebar-main {margin-top: 0;padding: 1em 2em;}
     .sidebar-section {min-height: 0;}
-    .sidebar-section h3 {font-size:9px;}
-    .sidebar-section a {font-size:7px;}
+    .sidebar-section h3 {font-size:20px;}
+    .sidebar-section a {font-size:17px;}
+    
     #archives {width: 100%;display: flex;}
     .archive-group {margin-right: 1em;}
     .footer {height: 180px;}
@@ -220,8 +226,9 @@ a.linkedin, a.twitter {background: #0e76a8;color: #fff;padding-top: 7px;font-siz
     .card h4 {line-height: 0.9!important;}
     .sidebar-main {margin-top: 25px;padding: 1em 1.5em;}
     .sidebar-section {min-height: 0;}
-    .sidebar-section h3 {font-size:16px;}
-    .sidebar-section a {font-size:10px;}
+    .sidebar-section h3 {font-size:20px;}
+    .sidebar-section a {font-size:18px;}
+    
     #archives {width: 100%;display: block;}
     .archive-group {margin-right: 1em;}
     .footer {height: 180px;}
