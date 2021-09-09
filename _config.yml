@@ -26,7 +26,8 @@ instagram:        https://www.instagram.com/tokiota_it
 profile_github:   https://github.com/tokiota
 profile_linkedin: https://www.linkedin.com/company/tokiota/
 
-paginate:         10
+paginate:         6
+paginate_path:    "/page/:num/"
 future:           false
 title:            "Blog de Tokiotas"
 tagline:          "pasión por la tecnología"

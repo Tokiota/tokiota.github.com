@@ -71,39 +71,48 @@ title: Home
 
 <section class="post-recientes">
   <div class="container">
-    <div class="row justify-content-center">
+    <div id="divPostRecentContent" class="row justify-content-center">
       <div class="cab-separador">
         <span>
           <i class="fa fa-calendar-check-o" aria-hidden="true"></i> POSTS RECIENTES
         </span>
       </div>
-      <!-- Filter recent posts  -->
-      {% assign posts-recents = site.posts | sort: 'date' | reverse %}
-      {% for post in posts-recents limit: 6 %}
-        <div class="col-12 col-sm-6 col-lg-4 mb-3">
+      <!-- Filter recent posts -->
+      <!-- template -->
+        <!-- 
+          <div class="col-12 col-sm-6 col-lg-4 mb-3">
           <div class="card h-100">
-            <div class="card-img-box" style="background-image:url({{ post.featured_image }});"></div>
+            <div class="card-img-box" style="background-image:url(post.featured_image);"></div>
             <div class="card-body">
               <p class="post-info">
-                <span class="post-date">{% include code_date.html date=post.date %}</span> <span class="post-author-name">por {{ post.author.name }}</span>
+                <span class="post-date">post.date</span> <span class="post-author-name">por post.author.name </span>
               </p>
               <h4 class="card-title">
-                <a href="{{ post.url }}">{{ post.title }}</a>
+                <a href="post.url">post.title</a>
               </h4>
               <p class="card-text">
-                {{ post.summary }}
+                post.summary
               </p>
-              <a href="{{ post.url }}" class="myButton">Leer más &rsaquo;&rsaquo; </a>
+              <a href="post.url" class="myButton">Leer más &rsaquo;&rsaquo; </a>
             </div>
           </div>
-        </div>
-      {% endfor %}
+        </div> 
+      -->
+      
     </div>
+    <div id="divContentLoadMorePosts" class="row mt-4">
+      <div class="col-12 text-center">
+        <a href="#" onclick="window.indexPage.ShowMorePosts();return false;" class="myButton myButtonBlack">Cargar más</a>
+      </div>
+    </div>
+     <!-- Script load more posts -->
+     <script type="text/javascript" src="{{ site.baseurl }}assets/scripts/index.js" ></script>
   </div>
 </section>
 
+
 <!-- PAGINACION -->
-<section class="pagination">
+<section class="pagination" style="display: none;">
   <div class="container-fluid">
     <div class="row">
       <div class="h-100 col no-padding">

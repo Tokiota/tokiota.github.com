@@ -47,6 +47,11 @@ a.myButtonBlack {background-color: #000;border: 1px solid #000;color: #fff !impo
 .card h4 {line-height:1 !important;}
 h4.card-title a {color: #000;font-size: 16px;font-weight: 700;}
 .post-info,.post-date,.post-author-name {font-size: 9px;color: #999999;margin-bottom: 0;}
+p.post-info {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .post p {width: 100%;}
 .card-text {font-size: 12px;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
 
