@@ -16,6 +16,9 @@ author:
   linkedin: https://www.linkedin.com/in/jmfloreszazo/
   twitter: https://www.twitter.com/jmfloreszazo/
   github: https://github.com/jmfloreszazo
+onTop: false
+pined: false
+pinedOrder: 0
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 

@@ -13,6 +13,9 @@ author:
   name: "Daniel Camacho Rodríguez"
   image: daniel_camacho_rodriguez.jpg
   signText: "Infrastructure & Cloud Consultant"
+onTop: false
+pined: true
+pinedOrder: 0
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 

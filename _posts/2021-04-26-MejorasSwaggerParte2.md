@@ -13,6 +13,9 @@ author:
   name: "Antonio Cárdenas García"
   image: antonio_cardenas_garcia.jpg
   signText: "Development & Cloud Consultant"
+onTop: false
+pined: false
+pinedOrder: 0
 ---
 
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}

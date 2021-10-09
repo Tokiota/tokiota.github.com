@@ -14,6 +14,9 @@ author:
   name: "Tokiota"
   image: tokiota.jpg
   signText: "Tokiota Team"
+onTop: false
+pined: false
+pinedOrder: 0
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 

@@ -13,6 +13,9 @@ author:
   name: "Francisco Javier Lafuente"
   image: francisco_javier_lafuente_martinez.jpg
   signText: "Development & Cloud Consultant"
+onTop: false
+pined: false
+pinedOrder: 0
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 

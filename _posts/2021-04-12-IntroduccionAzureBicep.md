@@ -13,6 +13,9 @@ author:
   name: "Jose María Flores Zazo"
   image: jose_maria_flores_zazo.jpg
   signText: "Development & Cloud Consultant"
+onTop: false
+pined: false
+pinedOrder: 0
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 

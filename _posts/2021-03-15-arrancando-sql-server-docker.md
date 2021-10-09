@@ -13,6 +13,9 @@ author:
   name: "David Gonzalo"
   image: david_gonzalo_pena.jpg
   signText: "Team Lead & Cloud Developer Consultant"
+onTop: false
+pined: false
+pinedOrder: 0
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 

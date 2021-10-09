@@ -13,6 +13,9 @@ author:
   name: "Hector Escalante"
   image: hector_samuel_escalante_albarran.jpg
   signText: "Development & Cloud Consultant"
+onTop: true
+pined: false
+pinedOrder: 0
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
