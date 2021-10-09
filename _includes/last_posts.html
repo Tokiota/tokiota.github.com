@@ -1,14 +1,8 @@
-<div class="related">
-  <h3>Artículos recientes</h3>
-  <ul class="related-posts">
-    {% for p in site.related_posts limit:5 %}
-      <li>
-        <h4>
-          <a href="{{ p.url }}">
-            {{ p.title }}
-          </a>
-        </h4>
-      </li>
-    {% endfor %}
-  </ul>
+<div class="related afterpost-section">
+  <h3 class="mb-3">Artículos relacionados</h3>
+  {% for p in site.related_posts limit:5 %}
+    <a href="{{ p.url }}" class="mb-2">
+      {{ p.title }}
+    </a>
+  {% endfor %}
 </div>

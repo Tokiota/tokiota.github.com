@@ -13,14 +13,22 @@ author:
   name: "Daniel Camacho Rodríguez"
   image: daniel_camacho_rodriguez.jpg
   signText: "Infrastructure & Cloud Consultant"
+onTop: false
+pined: true
+pinedOrder: 0
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
-{% include code_image.html path=pathPublicFolder
+{% include code_image_cab_post.html path=pathPublicFolder
 image='azure_file_sync.jpg'
 title='Hybrid file Server'
 style=''
 %}
+
+{% include
+code_data_post.html
+%}
+
 La acumulación de archivos y documentos en nuestros servidores de ficheros puede ser preocupante, pues implica la necesidad de eliminar o archivar documentos para liberar espacio y/o ampliar cabina/discos. Esto se suele traducir en malestar por parte del usuario y/o en un desembolso económico. Todo ello sin contar con la infraestructura a montar en el caso de tener diferentes sedes en diferentes lugares geográficos ni tampoco en las soluciones de *backup* a implementar.
 
 Es cierto que existen diferentes tipos de infraestructuras para solucionar estos problemas. Desde Tokiota presentamos una solución para solventarlos y, además, tener una recuperación ante un desastre de nuestros servidores de ficheros rápido y sencillo. Nosotros la hemos llamado *Hybrid File Server*.

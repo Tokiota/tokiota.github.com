@@ -13,13 +13,20 @@ author:
   name: "Antonio Cárdenas García"
   image: antonio_cardenas_garcia.jpg
   signText: "Development & Cloud Consultant"
+onTop: false
+pined: false
+pinedOrder: 0
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
-{% include code_image.html path=pathPublicFolder
+{% include code_image_cab_post.html path=pathPublicFolder
 image='swagger-banner.png'
 title='Mejoras Swagger parte 1'
 style=''
+%}
+
+{% include
+code_data_post.html
 %}
 
 Vamos a empezar una serie de posts dedicados a sacar más provecho a Swagger y darle más valor a nuestra API.

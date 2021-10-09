@@ -1,5 +1,7 @@
 
-{% assign words = content | number_of_words  %}
+{% if content != nil %}
+  {% assign words = content | number_of_words  %}
+{% endif%}
 {% if page.words != nil %}
   {% assign words = page.words  %}
 {% endif%}

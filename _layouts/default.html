@@ -5,26 +5,32 @@
 
   <body>
     {% include cookie-consent.html %}
-    <div class="grid-container">
-      <header class="header">
-        {% include header.html %}
-      </header>
+    <section class="navigation-fixed">
+      {% include navigation.html %}
+    </section>
 
-      <div class="containerMain">
-        <main class="main">
-          {{ content }}
-        </main>
-      
-        <div class="sidebar sidebar-right">
-          {% include sidebar_right.html %}
+    <header class="header">
+      {% include header.html %}
+    </header>
+
+    <section class="sidebar_central">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            {% include sidebar_right.html %}
+          </div>
         </div>
       </div>
-      
-      <footer class="footer">
-        {% include footer.html %}
-      </footer>
+    </section>
 
-    </div>
+    <section class="main-wrapper mt-0 mt-md-5">
+      {{ content }}
+    </section>
+    
+    <footer class="footer">
+      {% include footer.html %}
+    </footer>
+
     
   </body>  
   

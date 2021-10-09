@@ -16,15 +16,21 @@ author:
   linkedin: https://www.linkedin.com/in/jmfloreszazo/
   twitter: https://www.twitter.com/jmfloreszazo/
   github: https://github.com/jmfloreszazo
+onTop: false
+pined: false
+pinedOrder: 0
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
-{% include code_image.html path=pathPublicFolder
+{% include code_image_cab_post.html path=pathPublicFolder
 image='logo.png'
 title='Azure CLI'
 style=''
 %}
 
+{% include
+code_data_post.html
+%}
 
 Parafraseando la apertura de mi [anterior artículo sobre Azure CLI]({{ site.baseurl }}2021/05/10/Azure-CLI/): *"El entorno gráfico del portal de Azure DevOps, cambia constantemente"*, es cierto que no tanto como el portal de Azure. Pero sirve para hacer hincapié en que estamos aproximadamente en la misma situación.
 
