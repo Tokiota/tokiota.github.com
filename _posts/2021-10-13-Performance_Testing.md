@@ -1,14 +1,14 @@
 ---
 published: true
-date: 2021-07-05 04:00:00 +0100
+date: 2021-10-3 04:00:00 +0100
 layout: post
-title: "Azure CLI extensión para Azure DevOps, continua documentando"
-summary: "Además de documentar con Azure CLI, tema tratado con anterioridad; podemos trabajar con Azure DevOps a través de una extensión que nos permitirá documentar y automatizar todo nuestro ecosistema."
-excerpt: "Poder generar a través de la linea de comando proyectos, variables y despliegues, etc. nos permitirá poder reproducir nuestro entorno en cuestión de minutos y reproducir el ecosistema con una certeza absoluta."
+title: "Performance Test"
+summary: "pdte."
+excerpt: "pdte."
 categories: [Desarrollo]
-tags: [devops, cli, azure]
-featured_image: /public/uploads/2021/07/05-Azure-CLI-DevOps/logo.png
-pathToPublicFolder: "public/uploads/2021/07/05-Azure-CLI-DevOps"
+tags: [devops, cli, azure, test]
+featured_image: /public/uploads/2021/10/13-Performance-Test/performance-test.png
+pathToPublicFolder: "public/uploads/2021/10/13-Performance-Test"
 author:
   name: "Jose María Flores Zazo"
   image: jose_maria_flores_zazo.jpg
@@ -20,7 +20,7 @@ author:
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
 {% include code_image.html path=pathPublicFolder
-image='logo.png'
+image='performance-test.png'
 title='Azure CLI'
 style=''
 %}
