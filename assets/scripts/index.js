@@ -6,8 +6,8 @@ $(document).ready(function(){
   var indexPage = function(){
     
     var _posts = [];
-    var _posts_per_page = 3;
-    var _months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+    var _posts_per_page = 6;
+    var _months = ["Enero", "Febrero", "Marzo", "Abríl", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
     
     var _getNextPost = null;
 
