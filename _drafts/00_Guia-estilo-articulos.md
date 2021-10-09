@@ -13,14 +13,28 @@ author:
   name: "Tokiota"
   image: tokiota.jpg
   signText: "Tokiota Team"
+onTop: true
+pined: true
+pinedOrder: -1
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
+
+{% include code_image_cab_post.html path=pathPublicFolder
+image='blog.jpg'
+title='Imagen de portada'
+style=''
+%}
+
+{% include
+code_data_post.html
+%}
+
 
 Esta entrada de blog sirve a modo de guía de estilos y recursos a usar para hacer que los artículos brillen correctamente.
 Para ver como se escribe cada sección, accede al código de este fichero <b>00_Guía-estilo.artículos.md</b>. 
 Este mismo fichero no deja de ser un artículo en sí mismo para usar de modelo.
 
-Aquí tienes un índice de la guía:
+<b>Aquí tienes un índice de la guía:</b>
 <!-- TOC -->
 
 - [Antes de empezar](#antes-de-empezar)
@@ -38,17 +52,17 @@ Aquí tienes un índice de la guía:
 
 <!-- /TOC -->
 
-# Antes de empezar
+## Antes de empezar
 <b>Escribe el artículo</b>
 Olvídate de esta guía y de la maquetación en *Markdown*. Escribe el artículo en un Word, sin faltas de ortografía, envíaselo a tu TeamLead o responsable (porque dos ojos siempre ayudan). Cuando lo tengas listo, vuelve aquí y lo maquetamos.
 
-# Cómo empiezo
+## Cómo empiezo
 Bien, si has llegado hasta aquí, es que ya tienes tu artículo escrito y revisado.
 
 Crea un fichero en blanco sobre la carpeta _post con la siguiente nomenclatura:
 <br/><b>yyyy-MM-dd-mi-titulo-del-articulo.md</b>.
 
-# Metadatos del artículo
+## Metadatos del artículo
 Todo artículo necesita especificar unos datos que se sitúan al inicio del fichero y se delimitan entre dos líneas con tres guiones.
 <pre data-enlighter-language="raw">
 ---
@@ -66,6 +80,9 @@ author:
   name: "Tokiota"
   image: tokiota.jpg
   signText: "Tokiota Team"
+onTop: false
+pined: false
+pinedOrder: 1
 ---
 {{ "{% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder " }}%}
 </pre>
@@ -91,13 +108,31 @@ A continuación explico cada uno:
 - <b>summary</b>: Este es un resumen largo del artículo que se usará de entradilla en la pantalla Home. aquí tambien se admiten tags html para palabras en <b>negrita</b>, en <i>cursiva</i>, enlaces a alguna <a href='https://tokiota.com'>página web</a> y mismo emojis ⛩😃⛩. Si no sabes como ponerlos es tan fácil como pulsar dos teclas [WIN]+[.] y de saldrá un menú donde elegir (al menos en Windows10).
 - <b>author name</b>: Nombre de la persona autora del artículo.
 - <b>author image</b>: Foto del autor/a. Debe alojarse en la carpeta <b>public/img/authors</b>. [Ver aquí más detalle.](#¿qué-foto-pongo-para-el-autor?)
-- <b>author signText</b>: texto que
+- <b>author signText</b>: Texto con la posicion del autor. P.ej: "Senior Developer".
+- <b>onTop</b>: true/false --> Si se marca en True se posicionará en el top de la página de inicio. Siempre y cuando sea el articulo más actual en fecha.
+- <b>pined</b>: true/false --> True si quieres que aparezca en la seccion de destacados. Ver pinOrder abajo.
+- <b>pinedOrder</b>: Valor numérico que indica el orden en el que aparece en la secion de destacados en la página de inicio. Siempre y cuando no haya otros articulos más recientes con mismo o menor pinOrder.
 
 ## Variables de página 
 Tras los `---` tenemos definido una variable de página:
 - <b>pathPublicFolder</b>: será usada para incluir una imágen o cualquier enlace a fichero ya que es una url a la carpeta donde se alojar imágenes o ficheros adjuntos usados en artículo.
 
-# Qué foto pongo para el autor
+## Como manejar los artículos destacados y por secciones de portada
+La página de inicio del blog se encuentra dividida por secciones:
+
+{% include code_image.html path=pathPublicFolder 
+image='home_page_sections.png'
+title='secciones de la pagina de inicio'
+style=''
+%}
+
+- Barra con las categorías con el número de artículos que contiene cada categoría.
+- Primera sección con el artículo más destacado en el top de la página. Importante saber que si se marca más de un articulo para estar en el top se mostará siempre el artículo más reciente. Ver metadato **onTop**. 
+- Segunda sección con los dos artículos marcados como destacados. Importante saber que solo se muestran dos artículos según el orden y fecha reciente. Ver metadato **pined** y **pinedOrder**.
+- Tercera sección. La página de inicio está preparada para mostrar una sección de *Historias inspiradoras* para incluir una categoría especial como pueda ser de Sokiota o propia de historias relevantes de Tokiota. Esto está en proceso y de momento está bloqueada la generación y oculto en estilos. Se puede ver más en el fichero index.html.
+
+
+## Qué foto pongo para el autor
 Primero busca la imagen en <b>public/img/authors</b>, puede que ya exista.
 
 Si hay que añadir una nueva, mi consejo es descargar la imagen que sale con tu usuario en Teams.
@@ -114,7 +149,7 @@ title='Como descargar la imagen desde outlook web'
 style=''
 %}
 
-# Cómo se ponen los títulos
+## Cómo se ponen los títulos
 Así se escriben los títulos
 <pre data-enlighter-language="markdown">
 # Esto es un Título 1
@@ -131,8 +166,10 @@ y así salen:
 #### Esto es un Título 4
 ##### Esto es un Título 5
 ###### Esto es un Título 6
+<br>
+<br>
 
-# Estilos de letras:
+## Estilos de letras
 Hay dos maneras
 - Formato Markdown
 <pre data-enlighter-language="markdown">
@@ -146,7 +183,7 @@ Hay dos maneras
 <b>Negrita</b>
 </pre>
 
-# Cómo añadir un enlace
+## Cómo añadir un enlace
 Esto lo haremos por nomenclatura Markdown. 
 Pero intentaremos seguir lo siguiente:
 <pre data-enlighter-language="markdown">
@@ -154,7 +191,7 @@ Pero intentaremos seguir lo siguiente:
 </pre>
 
 
-# Cómo añadir una imágen
+## Cómo añadir una imágen
 La forma más facil de insertar una imágen es haciendo uso del siguietne fragmento de código indicando el fichero de la imagen y el texto alternativo:
 <pre data-enlighter-language="markdown">
 {{ "
@@ -183,7 +220,7 @@ Es importante que el nombre de la carpeta sea en <b>minúsculas</b> y <b>sin esp
 content='Siempre puedes hacer uso de código html para incluir imágenes de urls externas pero evitaremos esta práctica en la medida de lo posible porque si la url externa cambia o desaparece el artículo pierde valor. Sería mejor hacer una copia a nuestra carpeta y citar fuente/autor.'
 %}
 
-# Cómo añadir notas
+## Cómo añadir notas
 Para insertar una nota como esta:
 
 {% include code_note.html 
@@ -198,7 +235,7 @@ content='Aquí escribe el texto.'
 " }}%}
 </pre>
 
-# Cómo añadir fragmentos de código
+## Cómo añadir fragmentos de código
 
 Para visualizar un fragmento de código así:
 <pre data-enlighter-language="csharp">
@@ -283,7 +320,7 @@ Es recomendable no usar [Gist](https://gist.github.com/){:target="_blank"} para 
 Es por ello que él código que se quiera explicar <b>debe incluirse en el artículo.</b> 
 Si queremos dejar un ejemplo completo de un proyecto es recomendable abrir uno en  GitHub sobre la cuenta de organización de Tokiota.
 
-# Cómo escribir una tabla de datos
+## Cómo escribir una tabla de datos
 La recomendación es hacerlo en formato html porque el markdown a veces no renderiza por culpa de algun carácter.
 <pre data-enlighter-language="html">
 <table class="simpleTable">
@@ -300,8 +337,6 @@ La recomendación es hacerlo en formato html porque el markdown a veces no rende
 </table>
 </pre>
 
-
-<hr>
 Si crees que puedes mejorar la guía bienvenido sea. Toda mejora será bienvenida.
 
 Saludos!

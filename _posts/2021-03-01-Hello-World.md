@@ -14,14 +14,22 @@ author:
   name: "Tokiota"
   image: tokiota.jpg
   signText: "Tokiota Team"
+onTop: false
+pined: false
+pinedOrder: 0
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
-{% include code_image.html path=pathPublicFolder
+{% include code_image_cab_post.html path=pathPublicFolder
 image='hello-toris.jpg'
 title='Hello World!'
 style=''
 %}
+
+{% include
+code_data_post.html
+%}
+
 
 Hello World! 
 
@@ -30,4 +38,4 @@ Con estas palabras, y su significado desde los inicios del mundo de la programac
 Un rincón creado con la pasión de todos nuestros tokiotas por compartir el conocimiento.
 
 Gracias.
-<br>ありがとう。
+<br/>ありがとう。

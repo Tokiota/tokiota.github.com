@@ -1,0 +1,54 @@
+<div class="navigation-left">
+  <a href="{{ site.baseurl }}search">
+    <i class="fa fa-search" aria-hidden="true"></i>
+  </a>
+  <!-- <div class="search-box">
+    <button class="btn-search"><i class="fa fa-search"></i></button>
+    <input type="text" class="input-search" placeholder="¿Qué quieres buscar...?">
+  </div> -->
+</div>
+
+<div class="navigation-right">
+    {% if site.twitter %}
+    <div class="navigation-items">
+      <a href="https://www.twitter.com/{{ site.twitter }}" target="_blank">
+          <i class="fa fa-twitter"></i>
+      </a>
+    </div>
+    {% endif %}
+    {% if site.facebook %}
+    <div class="navigation-items">
+      <a href="{{ site.facebook }}" target="_blank">
+          <i class="fa fa-facebook"></i>
+      </a>
+    </div>
+    {% endif %}
+    {% if site.profile_linkedin %}
+    <div class="navigation-items">
+      <a href="{{ site.profile_linkedin }} " target="_blank">
+          <i class="fa fa-linkedin"></i>
+      </a>
+    </div>
+    {% endif %}
+    {% if site.youtube %}
+    <div class="navigation-items">
+      <a href="{{ site.youtube }}" target="_blank">
+          <i class="fa fa-youtube"></i>
+      </a>
+    </div>
+    {% endif %}
+    {% if site.instagram %}
+    <div class="navigation-items">
+      <a href="{{ site.instagram }}" target="_blank">
+          <i class="fa fa-instagram"></i>
+      </a>
+    </div>
+    {% endif %}
+    {% if site.profile_github %}
+    <div class="navigation-items">
+      <a href="{{ site.profile_github }}" target="_blank">
+          <i class="fa fa-github"></i>
+      </a>
+    </div>
+    {% endif %}
+  </div>

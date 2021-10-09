@@ -1,0 +1,40 @@
+---
+layout: page
+permalink: /search/
+title: Buscar
+---
+
+<section class="search">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center">
+        <img alt="Tokiota Blog" src="/assets/my-images/bg-search.jpg"/>
+        <h4 class="mt-4 font-weight-bold">
+          Utiliza este buscador e intentaremos mostrarte el camino:
+        </h4>
+        <em title="Diez personas, diez colores. / Para gustos, los colores.">
+          十人十色
+        </em>
+        <div class="col-12 col-md-10 col-lg-8 search-section">
+          <label>
+            <i class="fa fa-search"></i>
+          </label>
+          <input type="text" id="search-input" class="search-input" placeholder="¿Qué quieres buscar...?">
+          <div id="search-container">
+            <ul id="results-container"></ul>
+          </div>
+          <!-- Script pointing to jekyll-search.js -->
+          <script type="text/javascript">
+            SimpleJekyllSearch({
+              searchInput: document.getElementById('search-input'),
+              resultsContainer: document.getElementById('results-container'),
+              json: '/search.json',
+              noResultsText: 'Vaya :( no hay resultado sobre lo que esperabas. <br/>見ぬが花',
+              limit: 10,
+            })
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

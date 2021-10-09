@@ -1,59 +1,81 @@
 <!-- Footer -->
-<div class="footer-container">
-  {% if site.twitter %}
-  <div class="footer-container-items">
-    <a href="https://www.twitter.com/{{ site.twitter }}" target="_blank">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </div>
-  {% endif %}
-  {% if site.facebook %}
-  <div class="footer-container-items">
-    <a href="{{ site.facebook }}" target="_blank">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </div>
-  {% endif %}
-  {% if site.profile_linkedin %}
-  <div class="footer-container-items">
-    <a href="{{ site.profile_linkedin }} " target="_blank">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </div>
-  {% endif %}
-  {% if site.youtube %}
-  <div class="footer-container-items">
-    <a href="{{ site.youtube }}" target="_blank">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </div>
-  {% endif %}
-  {% if site.instagram %}
-  <div class="footer-container-items">
-    <a href="{{ site.instagram }}" target="_blank">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </div>
-  {% endif %}
-  {% if site.profile_github %}
-  <div class="footer-container-items">
-    <a href="{{ site.profile_github }}" target="_blank">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </div>
-  {% endif %}
-</div>
+<footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <img alt="Tokiota Blog" src="/assets/my-images/logo-footer.png"/>
+      <p>
+        <a href="">
+          Política de privacidad 
+        </a>
+        <span>
+          |
+        </span>
+        <a href="mailto:{{ site.contactEmail }}">
+          {{ site.contactEmail }}
+        </a>
+        <span>
+          |
+        </span>
+          Copyright &copy; {{ site.ownerName }} {{ 'now' | date: "%Y" }}
+      </p>
+    </div>
 
-<p class="copyright text-muted">Copyright &copy; {{ site.author.name }} {{ 'now' | date: "%Y" }}</p>
+    <div class="footer-right">
+      {% if site.twitter %}
+      <div class="footer-container-items">
+        <a href="https://www.twitter.com/{{ site.twitter }}" target="_blank">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </div>
+      {% endif %}
+      {% if site.facebook %}
+      <div class="footer-container-items">
+        <a href="{{ site.facebook }}" target="_blank">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </div>
+      {% endif %}
+      {% if site.profile_linkedin %}
+      <div class="footer-container-items">
+        <a href="{{ site.profile_linkedin }} " target="_blank">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </div>
+      {% endif %}
+      {% if site.youtube %}
+      <div class="footer-container-items">
+        <a href="{{ site.youtube }}" target="_blank">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </div>
+      {% endif %}
+      {% if site.instagram %}
+      <div class="footer-container-items">
+        <a href="{{ site.instagram }}" target="_blank">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </div>
+      {% endif %}
+      {% if site.profile_github %}
+      <div class="footer-container-items">
+        <a href="{{ site.profile_github }}" target="_blank">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+</footer>

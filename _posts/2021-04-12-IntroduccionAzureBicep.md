@@ -13,13 +13,20 @@ author:
   name: "Jose María Flores Zazo"
   image: jose_maria_flores_zazo.jpg
   signText: "Development & Cloud Consultant"
+onTop: false
+pined: false
+pinedOrder: 0
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
-{% include code_image.html path=pathPublicFolder
+{% include code_image_cab_post.html path=pathPublicFolder
 image='logo.png'
 title='Azure Bicep'
 style=''
+%}
+
+{% include
+code_data_post.html
 %}
 
 En el momento de la publicación de este artículo el desarrollo del producto esta en una fase inicial, pero con soporte por parte de Azure.

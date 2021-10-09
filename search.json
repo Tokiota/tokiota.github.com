@@ -8,7 +8,9 @@
       "tags"     : "{{ post.tags | join: ', ' }}",
       "url"      : "{{ post.url }}",
       "date"     : "{{ post.date }}",
-      "author"   : "{{ post.author.name }}",      
+      "author"   : "{{ post.author.name }}",
+      "featured_image"  : "{{ post.featured_image }}",
+      "summary"  : "{{ post.summary }}",
       "content"  : {{ post.summary | strip_html | escape  | strip_newlines | remove_chars | jsonify  }}
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}

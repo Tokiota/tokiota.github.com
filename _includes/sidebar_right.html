@@ -1,98 +1,16 @@
-<div class="sidebar-section">
-  <h3>Tokiota Team</h3>
-  Con este blog queremos transmitir la pasión que todo Tokiota tiene por la tecnología, innovación y compartir esas iniciativas con todo el mundo.
-  Gracias por leernos y síguenos en nuestras redes sociales.
-  <br/>ありがとう。
-  <br/>
-  <span class="info-author">
-    <a href="https://www.twitter.com/{{ site.twitter }}" target="_blank">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-twitter fa-stack-1x"></i>
-      </span>
-    </a>
-    <a href="{{ site.facebook }}" target="_blank">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-facebook fa-stack-1x"></i>
-      </span>
-    </a>
-    <a href="{{ site.profile_linkedin }}" target="_blank">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-linkedin fa-stack-1x"></i>
-      </span>
-    </a>
-    <a href="{{ site.youtube }}" target="_blank">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-youtube fa-stack-1x"></i>
-      </span>
-    </a>
-    <a href="{{ site.instagram }}" target="_blank">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-instagram fa-stack-1x"></i>
-      </span>
-    </a>
-  </span>
-
-</div>
-
-<!-- <div class="sidebar-section">
-  <h3>Próximos eventos</h3>
-  <div><i>sin agenda</i></div>
-</div> -->
-
-<div class="sidebar-section">
-  <input type="text" id="search-input" class="search-input" placeholder="Buscar...">
-  <div id="search-container">
-    <ul id="results-container"></ul>
-  </div>
-  <!-- Script pointing to jekyll-search.js -->
-  <script type="text/javascript">
-    SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('results-container'),
-      json: '/search.json',
-      noResultsText: 'No hay resultados',
-      limit: 5,
-    })
-  </script>
-</div>
-
-<div class="sidebar-section">
-  
-  <div id="tagscloud">
-    {% assign sortedTags = site.tags | sort %}
-    {% assign index = 1 %}
-    
-    {% for tag in sortedTags %}
-      <div class="archive-group">
-        {% capture tag_name %}{{ tag | first }}{% endcapture %}
-        <p></p>
-        <a class="tagc{{index}}" href="/tags/#{{ tag_name }}">{{ tag_name }} ({{ site.tags[tag_name].size }})</a>      
+<section class="sidebar-main">
+  <div class="row mb-sm-3 mb-md-0">
+    <div class="sidebar-section text-center col-12">
+      <h3 class="mb-1 mb-md-3">Categorías</h3>
+      <div id="archives">
+        {% assign sortedCategories = site.categories | sort %}
+        {% for category in sortedCategories %}
+          <div class="archive-group">
+            {% capture category_name %}{{ category | first }}{% endcapture %}
+            <a class="mb-0 mb-sm-3" href="/categories/#{{ category_name }}">{{ category_name }} <small>[{{ site.categories[category_name].size }}]</small></a>
+          </div>
+        {% endfor %}
       </div>
-      {% assign index = index | plus:1 %}
-      {% if index > 3' %}
-        {% assign index = 1 %}
-      {% endif %}
-    {% endfor %}
+    </div>
   </div>
-</div>
-
-<div class="sidebar-section">
-  <h3>Categorías</h3>
-  <div id="archives">
-    {% assign sortedCategories = site.categories | sort %}
-    {% for category in sortedCategories %}
-      <div class="archive-group">
-        {% capture category_name %}{{ category | first }}{% endcapture %}
-        <p></p>
-        <a href="/categories/#{{ category_name }}">{{ category_name }} ({{ site.categories[category_name].size }})</a>      
-      </div>
-    {% endfor %}
-  </div>
-</div>
-
-
-{% if page.layout == 'post' %}
-<div class="sidebar-section">
-  {% include last_posts.html %}
-</div>
-{% endif %}
+</section>
