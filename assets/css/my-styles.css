@@ -83,6 +83,10 @@ a.pagination-item:hover {opacity:1;text-decoration: none!important;background-co
 #search-container ul {padding-left:20px; list-style: hiragana; text-align: start;}
 #search-container ul li a {color: #000000;display:block;font-size: 14px;}
 #search-container ul li a:hover {color: #C00000;text-decoration: underline;}
+ul.list-posts-container {padding-left:20px; list-style: hiragana; text-align: start;}
+ul.list-posts-container li { padding-bottom: 20px; }
+ul.list-posts-container li a {color: #000000;display:block;font-size: 16px;}
+ul.list-posts-container li a:hover {color: #C00000;text-decoration: underline;}
 #archives {width: 100%;display: flex;justify-content: center;}
 .archive-group {margin-right: 1em;}
 
