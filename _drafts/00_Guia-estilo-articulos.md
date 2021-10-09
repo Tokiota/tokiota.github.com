@@ -13,6 +13,9 @@ author:
   name: "Tokiota"
   image: tokiota.jpg
   signText: "Tokiota Team"
+onTop: true
+pined: true
+pinedOrder: -1
 ---
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
@@ -77,6 +80,9 @@ author:
   name: "Tokiota"
   image: tokiota.jpg
   signText: "Tokiota Team"
+onTop: false
+pined: false
+pinedOrder: 1
 ---
 {{ "{% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder " }}%}
 </pre>
@@ -102,11 +108,29 @@ A continuación explico cada uno:
 - <b>summary</b>: Este es un resumen largo del artículo que se usará de entradilla en la pantalla Home. aquí tambien se admiten tags html para palabras en <b>negrita</b>, en <i>cursiva</i>, enlaces a alguna <a href='https://tokiota.com'>página web</a> y mismo emojis ⛩😃⛩. Si no sabes como ponerlos es tan fácil como pulsar dos teclas [WIN]+[.] y de saldrá un menú donde elegir (al menos en Windows10).
 - <b>author name</b>: Nombre de la persona autora del artículo.
 - <b>author image</b>: Foto del autor/a. Debe alojarse en la carpeta <b>public/img/authors</b>. [Ver aquí más detalle.](#¿qué-foto-pongo-para-el-autor?)
-- <b>author signText</b>: texto que
+- <b>author signText</b>: Texto con la posicion del autor. P.ej: "Senior Developer".
+- <b>onTop</b>: true/false --> Si se marca en True se posicionará en el top de la página de inicio. Siempre y cuando sea el articulo más actual en fecha.
+- <b>pined</b>: true/false --> True si quieres que aparezca en la seccion de destacados. Ver pinOrder abajo.
+- <b>pinedOrder</b>: Valor numérico que indica el orden en el que aparece en la secion de destacados en la página de inicio. Siempre y cuando no haya otros articulos más recientes con mismo o menor pinOrder.
 
 ## Variables de página 
 Tras los `---` tenemos definido una variable de página:
 - <b>pathPublicFolder</b>: será usada para incluir una imágen o cualquier enlace a fichero ya que es una url a la carpeta donde se alojar imágenes o ficheros adjuntos usados en artículo.
+
+## Como manejar los artículos destacados y por secciones de portada
+La página de inicio del blog se encuentra dividida por secciones:
+
+{% include code_image.html path=pathPublicFolder 
+image='home_page_sections.png'
+title='secciones de la pagina de inicio'
+style=''
+%}
+
+- Barra con las categorías con el número de artículos que contiene cada categoría.
+- Primera sección con el artículo más destacado en el top de la página. Importante saber que si se marca más de un articulo para estar en el top se mostará siempre el artículo más reciente. Ver metadato **onTop**. 
+- Segunda sección con los dos artículos marcados como destacados. Importante saber que solo se muestran dos artículos según el orden y fecha reciente. Ver metadato **pined** y **pinedOrder**.
+- Tercera sección. La página de inicio está preparada para mostrar una sección de *Historias inspiradoras* para incluir una categoría especial como pueda ser de Sokiota o propia de historias relevantes de Tokiota. Esto está en proceso y de momento está bloqueada la generación y oculto en estilos. Se puede ver más en el fichero index.html.
+
 
 ## Qué foto pongo para el autor
 Primero busca la imagen en <b>public/img/authors</b>, puede que ya exista.
