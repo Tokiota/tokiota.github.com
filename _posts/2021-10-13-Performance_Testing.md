@@ -3,8 +3,8 @@ published: true
 date: 2021-10-13 04:00:00 +0100
 layout: post
 title: "Performance Test"
-summary: "Hoy en día cualquier aplicación debe ser medida en todos los parámetros posibles. Desde la infraestructura hasta la capacidad de repuestas admitidas, existen herramientas que muchas veces se pasan por alto y nos sirven para medir los límites de nuestra aplicación. Veamos que herramienta usamos en Tokiota y para que fin."
-excerpt: "Hoy en día cualquier aplicación debe ser medida en todos los parámetros posibles. Desde la infraestructura hasta la capacidad de repuestas admitidas, existen herramientas que muchas veces se pasan por alto y nos sirven para medir los límites de nuestra aplicación. Veamos que herramienta usamos en Tokiota y para que fin."
+summary: "Hoy en día cualquier aplicación debe ser medida en todos los parámetros posibles. Desde la infraestructura hasta la capacidad de repuestas admitidas. Existen herramientas que muchas veces se pasan por alto y nos sirven para medir los límites de nuestra aplicación. Veamos que herramienta usamos en Tokiota y para que fin."
+excerpt: "Hoy en día cualquier aplicación debe ser medida en todos los parámetros posibles. Desde la infraestructura hasta la capacidad de repuestas admitidas. Existen herramientas que muchas veces se pasan por alto y nos sirven para medir los límites de nuestra aplicación. Veamos que herramienta usamos en Tokiota y para que fin."
 categories: [Desarrollo]
 tags: [devops, cli, azure, test]
 featured_image: /public/uploads/2021/10/13-Performance-Test/performance-test.png
@@ -40,7 +40,7 @@ A parte del anterior ejemplo, podemos preguntarnos que más nos dan las pruebas 
 
 3. Hoy en día los usuarios somos muy exigentes y un entorno lento, con lags, que nos deja esperando, nos exaspera y nos vamos a otro entorno. En un producto empresaria interno, no se traduce en pérdida de clientes, si no productividad.
 
-Por eso en Tokiota, nos preocupamos de introducir y formar a nuestros compañeros en cosa como esta. Y es  [JMeter](https://jmeter.apache.org/)JMeter nuestra herramienta de batalla.
+Por eso en Tokiota, nos preocupamos de introducir y formar a nuestros compañeros en cosa como esta. Y es  [JMeter](https://jmeter.apache.org/) nuestra herramienta de batalla.
 
 Pero existen otras que también pueden acoplarse a tu entorno, ya sean de pago o gratuitas:
 
