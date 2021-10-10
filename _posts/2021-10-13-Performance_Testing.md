@@ -1,10 +1,10 @@
 ---
 published: true
-date: 2021-10-3 04:00:00 +0100
+date: 2021-10-13 04:00:00 +0100
 layout: post
 title: "Performance Test"
-summary: "pdte."
-excerpt: "pdte."
+summary: "Hoy en día cualquier aplicación debe ser medida en todos los parámetros posibles. Desde la infraestructura hasta la capacidad de repuestas admitidas, existen herramientas que muchas veces se pasan por alto y nos sirven para medir los límites de nuestra aplicación. Veamos que herramienta usamos en Tokiota y para que fin."
+excerpt: "Hoy en día cualquier aplicación debe ser medida en todos los parámetros posibles. Desde la infraestructura hasta la capacidad de repuestas admitidas, existen herramientas que muchas veces se pasan por alto y nos sirven para medir los límites de nuestra aplicación. Veamos que herramienta usamos en Tokiota y para que fin."
 categories: [Desarrollo]
 tags: [devops, cli, azure, test]
 featured_image: /public/uploads/2021/10/13-Performance-Test/performance-test.png
@@ -28,88 +28,34 @@ title='Azure CLI'
 style=''
 %}
 
+Podemos haber creado la API con los mejores patrones, con el codigo más limpio y reutilizable que quieras, que va muy fina, pero cuando llega el momento y sale a producción, puede ocurrir que se produzcan time-out, y no es culpa de tu magnifico desarrollo, es culpa de no haber previsto una infraestructura y escalado adecuado. Puede que operaciones esté allí a pie de cañón para escalar vertical u horizontalmente. Pero qué necesidad tienes de esa incertidumbre.
 
-Parafraseando la apertura de mi [anterior artículo sobre Azure CLI]({{ site.baseurl }}2021/05/10/Azure-CLI/): *"El entorno gráfico del portal de Azure DevOps, cambia constantemente"*, es cierto que no tanto como el portal de Azure. Pero sirve para hacer hincapié en que estamos aproximadamente en la misma situación.
+En el cloud, podemos crear reglas de escalado si conocemos los límites de nuestra arquitectura. Y no sirve que cuando llegue al 80% de CPU escale, esto puede estar bien a corto plazo, pero a largo supone un coste economico. Si hubieras realizado pruebas de stress, sabrías que quizá tu servicio aguanta muy bien hasta el 92%, aquí es cuando debes desplegar un nuevo nodo. Esto del 92% no es apurar, es acotar gastos. Es decir, medir y medir. Si no has realizado performace test, no podrás optimizar costes con los SKUs de los recursos adecuadamente.
 
-Esta vez no se trata de documentar cambios, si no, de documentar como preparar el entorno de nuestro proyecto y poder reproducirlo ante algún problema: borrado de una variable, modificación de alguna configuración de un despliegue, etc. o simplemente para moverlo de *tenant*.
+A parte del anterior ejemplo, podemos preguntarnos que más nos dan las pruebas de rendimiento:
 
-Muy pocos desarrolladores conocen esta extensión para la herramienta Azure CLI que lleva con nosotros aproximadamente un año: [Azure DevOps CLI](https://docs.microsoft.com/en-us/azure/devops/cli/?view=azure-devops)
+1. Mejorar el rendimiento de la aplicación es mejorar el resultado final.
 
-Para poder usarla primero debes tener instalado [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) y posteriormente añadir la extensión:
+2. Nos ayuda a un optimizar y ser eficiente con los recursos.
 
-<pre data-enlighter-language="Powerhsell">  
-az extension add --name azure-devops
-</pre> 
+3. Hoy en día los usuarios somos muy exigentes y un entorno lento, con lags, que nos deja esperando, nos exaspera y nos vamos a otro entorno. En un producto empresaria interno, no se traduce en pérdida de clientes, si no productividad.
 
-A partir de este momento el trabajo es muy similar al que realizamos con Azure CLI:
+Por eso en Tokiota, nos preocupamos de introducir y formar a nuestros compañeros en cosa como esta. Y es  [JMeter](https://jmeter.apache.org/)JMeter nuestra herramienta de batalla.
 
-<pre data-enlighter-language="Powerhsell">  
-az login
-</pre> 
+Pero existen otras que también pueden acoplarse a tu entorno, ya sean de pago o gratuitas:
 
-Establecemos un proyecto por defecto:
+* [Gatlin](Gatlin)
+* [Vegeta](https://github.com/tsenart/vegeta)
+* [WebLoad](https://www.radview.com/)
+* [K6S](https://k6.io/)
+* Etc.
 
-<pre data-enlighter-language="Powerhsell">  
-ORGANIZATION_URL=https://dev.azure.com/your-organization
-PROJECT_NAME=your-project
-az devops configure --defaults organization=$ORGANIZATION_URL project=$PROJECT_NAME
-</pre> 
+Una de las cosas que podemos hacer con estas herramientas es medir el stress, la carga máxima sostenida y ver cómo se comporta el escalado, test de pico, resistencia, ... de una aplicación. Con todos estos atributos medidos, sabemos el marco de trabajo y bajamos la incertidumbre, que siempre existe, pero reducida a la mínima expresión.
 
-Podemos importar un proyecto desde GitHub o desde una cuenta de DevOps (supongamos que estamos moviendo el proyecto a otra organización):
+Si bien es cierto que para hacer las cosas bien, necesitas un entorno muy controlado, no es lo mismo probarlo en tu máquina, que hacerlo en maquina dedicada exclusivamente para ello. Debemos tener mucho cuidado y evaluar siempre bajo las mismas condiciones, es como un experimento debemos controlar los factores exógenos. Las mediciones serían erróneas.
 
-<pre data-enlighter-language="Powerhsell">  
-REPOSITORY_NAME=your-repository-name
-REPOSITORY_URL=https://dev.azure.com/your-new-organizacion/$PROJECT_NAME
-az repos create --name $REPOSITORY_NAME
-az repos import create --git-source-url $REPOSITORY_URL --repository $REPOSITORY_NAME
-</pre> 
+Cuando tengas todo medido, tendrás tu base line, tu linea base donde comparas siguientes iteraciones de pruebas. Y como no, este tipo de pruebas entran en el ciclo de DevOps.
 
-Crear un grupo de variables:
+Por eso nuestra recomendación, es que dediques un tiempo a formarte en esta área. Intenta hacer proselitismo de estas acciones, ya que la inversión inicial garantiza un retorno inmediato.
 
-<pre data-enlighter-language="Powerhsell">  
-$SUBSCRIPTION_ID=your-subscription-id
-$SERVICE_CONNECTION_NAME=your-service-connection-name
-$VARIABLE_1=your-value-1
-$VARIABLE_2=your-value-2
-az pipelines variable-group create  --name MY_PROJECT_SETTINGS --authorize \
-    --variables VARIABLE_1=$VARIABLE_1 \
-    VARIABLE_2=$VARIABLE_2 \
-    AZURE_SERVICE_CONNECTION_NAME="$SERVICE_CONNECTION_NAME" \
-    AZURE_SUBSCRIPTION_ID=$SUBSCRIPTION_ID
-</pre> 
-
-Crear un Pipeline con variables:
-
-<pre data-enlighter-language="Powerhsell">  
-PIPELINE_NAME=your-pipeline-name
-az pipelines create --name $PIPELINE_NAME --repository $REPOSITORY_NAME \
-    --repository-type tfsgit --branch main --skip-first-run \
-    --yml-path pipelines/your-pipeline-file.yml
-az pipelines variable create --pipeline-name $PIPELINE_NAME --name PIPELINE_VAR_1 \
-    --allow-override
-</pre> 
-
-También podrás lanzar el pipeline desde CLI:
-
-<pre data-enlighter-language="Powerhsell">  
-VAR_1=your-value
-az pipelines run --name $PIPELINE_NAME \
-    --variables PIPELINE_VAR_1=$VAR_1
-</pre> 
-
-Toda la información de la extensión podrás verla con el comando:
-
-<pre data-enlighter-language="Powerhsell">  
-az devops -h
-</pre> 
-
-Insisto, toda esta información debe estar incluida en el Readme del proyecto. Con unos comandos tan simples te ahorras ir navegando por las distintas opciones del entorno gráfico, tomado capturas y añadiendo anotaciones.
-
-Espero que con esta breve introducción puedas dilucidar el potencial que ofrece usar la línea de comandos. Deliberadamente esta vez no he puesto ninguna captura de pantalla, ni siquiera para mostrar a que sección se corresponden en el portal de Azure DevOps.
-
-
-{% include code_note.html 
-content='Todos los ejemplo anteriores están preparados para usarlos con <a href="https://docs.microsoft.com/es-es/windows/wsl/install-win10">WSL</a>'
-%}
-
-
+Espero que estas pocas lineas hayan despertado tu interés y evalúes la posibilidad de hacer cada vez más robusta tu aplicación.
