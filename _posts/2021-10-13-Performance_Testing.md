@@ -38,7 +38,7 @@ A parte del anterior ejemplo, podemos preguntarnos que más nos dan las pruebas 
 
 2. Nos ayuda a un optimizar y ser eficiente con los recursos.
 
-3. Hoy en día los usuarios somos muy exigentes y un entorno lento, con lags, que nos deja esperando, nos exaspera y nos vamos a otro entorno. En un producto empresaria interno, no se traduce en pérdida de clientes, si no productividad.
+3. Hoy en día los usuarios somos muy exigentes y un entorno lento, con lags, que nos deja esperando, nos exaspera y nos vamos a otro entorno. En un producto empresarial interno, no se traduce en pérdida de clientes, si no productividad.
 
 Por eso en Tokiota, nos preocupamos de introducir y formar a nuestros compañeros en cosa como esta. Y es  [JMeter](https://jmeter.apache.org/) nuestra herramienta de batalla.
 
