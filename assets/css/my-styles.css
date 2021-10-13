@@ -1,6 +1,6 @@
 /**** MY STYLES *****/
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:wght@400;700,900&display=swap');
 
 body{background-image:url(../my-images/bg-header.jpg);background-position:top center;background-size:100% auto;background-repeat: no-repeat;font-family:'Montserrat';font-weight:400;overflow-x: hidden;}
 .main {padding: 0 25px 25px 25px;max-width:1100px;}
