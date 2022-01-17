@@ -7,8 +7,8 @@ summary: "La gestión de los costes de nuestra infraestructura con cambios o nue
 excerpt: "La gestión de los costes de nuestra infraestructura (IaC). #post #azure #terraform #cost"
 categories: [Infraestructura]
 tags: [terraform, cloud, cost, cli, azure]
-featured_image: /public/uploads/2021/12/17-infracost/logo3.jpg
-pathToPublicFolder: "public/uploads/2021/12/17-infracost"
+featured_image: /public/uploads/2022/01/17-infracost/logo3.jpg
+pathToPublicFolder: "public/uploads/2022/01/17-infracost"
 author:
   name: "Adrià Belmonte"
   image: adria_belmonte.jpg
