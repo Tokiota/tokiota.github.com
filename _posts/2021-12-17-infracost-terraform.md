@@ -7,7 +7,7 @@ summary: "La gestión de los costes de nuestra infraestructura con cambios o nue
 excerpt: "La gestión de los costes de nuestra infraestructura (IaC). #post #azure #terraform #cost"
 categories: [Infraestructura]
 tags: [terraform, cloud, cost, cli, azure]
-featured_image: /public/uploads/2021/12/17-infracost/logo.png
+featured_image: /public/uploads/2021/12/17-infracost/logo3.jpg
 pathToPublicFolder: "public/uploads/2021/12/17-infracost"
 author:
   name: "Adrià Belmonte"
@@ -21,7 +21,7 @@ pinedOrder: 0
 {% assign pathPublicFolder = site.baseurl | append: page.pathToPublicFolder %}
 
 {% include code_image_cab_post.html path=pathPublicFolder
-image='logo.png'
+image='logo3.jpg'
 title='infracost'
 style=''
 %}
@@ -110,7 +110,7 @@ title='infracost diff'
 style=''
 %}
 
-## End
+## Conclusiones
 Como habéis podido comprobar, de una forma fácil y rápida, podemos llegar a tener una estimación aproximada del coste de nuestra Infraestructura.
 
 En próximos artículo, podremos ver cómo incluir este proceso en nuestro CI/CD y delegar la aprobación de costes.
