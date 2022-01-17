@@ -38,7 +38,7 @@ Es por eso que hoy queremos hablaros de **Infracost**. Una herramienta Open Sour
 -----En la entrada de hoy, os hablaré de una herramienta open source la cual si utilizamos **[Infracost](https://www.infracost.io/)** para hacer nuestros despliegues, puede ayudarnos en dicha tarea.
 
 **Infracost**, tal y como la web indica, calcula los costes de la nube basándose en Terraform. Las estimaciones de costes pueden mostrarse en el terminal o ponerse en *Pull Requests* utilizando nuestras integraciones CI/CD.
-Vamos a centraremos como ver esto desde el terminal o cli.
+En el artículo de hoy, nos centraremos en la primera parte.
 
 
 ## Instalación
