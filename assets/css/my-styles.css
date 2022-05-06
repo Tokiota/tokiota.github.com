@@ -2,11 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:wght@400;700,900&display=swap');
 
-body{background-image:url(../my-images/bg-header.jpg);background-position:top center;background-size:100% auto;background-repeat: no-repeat;font-family:'Montserrat';font-weight:400;overflow-x: hidden;}
+/* body{background-image:url(../my-images/bg-header.jpg);background-position:top center;background-size:100% auto;background-repeat: no-repeat;font-family:'Montserrat';font-weight:400;overflow-x: hidden;} */
 .main {padding: 0 25px 25px 25px;max-width:1100px;}
-.header {background-color:transparent;margin-top: 60px;width: 100%;overflow:hidden;}
-.header img {width: 25%;margin-top: 30px;}
-.header h3 {font-size:16px;margin:40px 10% 50px 10%;text-align:center;font-weight: 400;}
+.header {margin-top: 60px;width: 100%;overflow:hidden;}
+.header img {margin-top: 30px;}
+.header h3 {font-size:16px;margin:40px 10% 50px 10%;font-weight: 400;}
 .navigation-fixed {position:fixed;top:0;width:100%;height: 65px;background-color: white;display: flex;align-items:center;justify-content: space-between; padding: 0 25px;-webkit-box-shadow: 0px 2px 92px 0px rgb(0 0 0 / 40%);-moz-box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.4);box-shadow: 0px 2px 92px 0px rgb(0 0 0 / 40%);z-index:9999999999999999999999;overflow:hidden;}
 .navigation-left {font-size: 22px;}
 .navigation-left a,.navigation-right a {color:#000;}

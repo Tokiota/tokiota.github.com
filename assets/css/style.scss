@@ -5,7 +5,7 @@
 
 $white: #fff !default;
 $gray: #f9f9f9 !default;
-$accent-color: #a40a0a !default;
+$accent-color: #c8c8c8 !default;
 $text-color: #515151 !default;;
 
 * {
@@ -27,7 +27,7 @@ html {
 }
 body {
   color: $text-color;
-  background-color: #fff;
+  background-color: #c8c8c8;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -156,7 +156,7 @@ article.entry:hover{
   padding: 20px;
   background-color: $accent-color;
   color: $white !important;
-  text-align: center;
+  
 }
 
 .header > h1,
